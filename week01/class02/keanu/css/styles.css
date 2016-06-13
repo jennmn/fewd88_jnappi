@@ -4,15 +4,21 @@ body {
 	font-family: helvetica;
 	line-height: 150%;
 }
-a:link {
-		font-weight: bold;
-		color: white;
-		text-decoration: none;
-		padding-right: 10px; 
-		
+a {
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	padding-right: 10px; 
+}
+
 a:active {
-		font-weight: bold;
-		color: yellow; 
-		text-decoration:underline
-		padding-right: 10px;
+	color: yellow; 
+}
+
+a:hover {
+	color: yellow;
+}
+
+a:selected {
+	color: pink;
 }
