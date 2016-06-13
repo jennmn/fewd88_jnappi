@@ -9,14 +9,25 @@ body {
 	font-size: 20px;
 }
 
+div.logo {
+	max-width: 800px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+img {
+	width:100px;
+	height:100px;
+}
+
 h1 {
 	max-width: 800px;
 	margin: auto;
-	padding-top: 30px;
+	padding-top: 5px;
   	font-family: 'Jaldi', helvetica, san-serif;
   	text-align: left;
-  	line-height: 50px;
-  	font-size: 50px;
+  	line-height: 48px;
+  	font-size: 48px;
  }
 
 h4 {
@@ -28,7 +39,7 @@ h4 {
 div.intro{
 	max-width: 800px;
 	margin: auto;
-	/*does this have to be a div to set a max width*/
+	/*--does this have to be a div to set a max width--*/
 }
 
 div.locations{
@@ -36,7 +47,7 @@ div.locations{
     margin: auto;
     padding: 5px;
     padding-right: 25px;
-    /*why isn't this div centering correctly - had to add padding to right*/
+    /*--why isn't the text in this div centering correctly - had to add padding to right--*/
     line-height: 1.5;
     font-weight: bold; 
  }
@@ -49,6 +60,7 @@ ul{
 li{
 	display: inline;
 	padding: 15px;
+	/*--how do i keep multi-word states from breaking to a new line in the middle--*/
 }
 
 hr{
