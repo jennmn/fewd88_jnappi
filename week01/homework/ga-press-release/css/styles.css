@@ -39,22 +39,20 @@ h4 {
 div.intro{
 	max-width: 800px;
 	margin: auto;
-	/*--does this have to be a div to set a max width--*/
 }
 
 div.locations{
     max-width: 550px;
     margin: auto;
     padding: 5px;
-    padding-right: 25px;
-    /*--why isn't the text in this div centering correctly - had to add padding to right--*/
     line-height: 1.5;
     font-weight: bold; 
  }
 
-ul{
+ul {
 	list-style-type: none;
 	text-align: center;
+	padding-left: 0px;
 }
 
 li{
