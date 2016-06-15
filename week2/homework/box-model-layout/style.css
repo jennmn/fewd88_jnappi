@@ -1,0 +1,47 @@
+
+#nav {
+	/*border: 20px solid gray;*/
+
+}
+
+div {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+	background-color: black;
+	vertical-align: middle;
+	padding-top: 10px;
+	height: 40px;
+}
+
+li {
+	display: inline;
+	color: white;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+p.text-box-1 {
+	color: blue;
+}
+
+p.text-box-2 {
+	color: green;
+}
+
+p.text-box-3 {
+	color: yellow;
+}
+
+/*.text-box-1, .text-box-2, .text-box-3*/
+div p {
+	background-color: salmon;
+	height: 30px;
+	max-height: 70px;
+	padding: 20px 15px;
+	text-align: center;
+}

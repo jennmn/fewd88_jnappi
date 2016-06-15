@@ -1,0 +1,60 @@
+body {
+	font-family: arial, san-serif;
+}
+
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+	background-color: gray;
+	padding: 10px;
+}
+
+.common {
+	width: 90%;
+	height: 80px;
+	background-color: pink;
+	/*--don't understand the below. why not use margin 0 auto--*/
+	margin: 20px;
+	margin-left: 5%
+}
+
+#nav {
+	list-style-type: none;
+	text-align: center;
+	background-color: black;
+	vertical-align: middle;
+	height: 40px;
+	line-height: 40px;
+}
+
+#nav a {
+	color: white;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.article {
+	padding: 20px 15px;
+	margin: 20px;
+	text-align: center;
+	line-height: 150%;
+}
+
+#article-one {
+	color: blue;
+}
+
+#article-two {
+	color: green;
+}
+
+#article-three {
+	color: yellow;
+}
