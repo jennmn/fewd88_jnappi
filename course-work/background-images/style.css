@@ -1,0 +1,10 @@
+div{
+	background-color: gray;
+	height: 500px;
+	width: 500px;
+	margin: 0 auto;
+	background-image: url("ga_logo.png");
+	background-repeat: no-repeat;
+	background-position: 180px 180px;
+	background-size: 128px 128px;
+}
