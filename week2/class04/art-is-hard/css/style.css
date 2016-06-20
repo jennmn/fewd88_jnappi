@@ -1,58 +1,38 @@
 body {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12px;
-	color: black; 
+	font-family: Courier, Georgia, serif;
+	font-size: 24px;
+	color: #959595; 
 	line-height: 1.25;
-	background: url("images/hipster-line.gif") no-repeat;
+	background: url("../images/hipster-line.gif") no-repeat;
+	min-height: 100%;
 }
 
 #container {
 	margin: 0 auto;
 	width: 910px;
+	padding-top: 155px;
 }
 
 #header {
-	padding: 140px 0 60px 0;
-}
-
-main {
-	padding: 20px;
-}
-
-main p {
-	margin-left: 20px;
-	color: #999999;
-}
-
-#footer {
-	padding: 20px;
-	text-align: right;
-}
-
-h1,h2,h3,h4, p, ul, ol {
-	margin-bottom: 20px;
-}
-
-p {
-	margin: 15px 0;
-}
-
-#header h2 {
-  font-size: 16px;
-  font-family: Courier;
+	padding: 0px 0px 20px 0px;
 }
 
 #header h1 {
   font-size: 100px;
-  padding: 0;
-  margin: 0;
-  padding-top: 10px;
-  color: #333333;
+  color: #cccccc;
   line-height: .7;
-  font-family: Courier;
   letter-spacing: -2px;
-  font-weight: bold;
   text-transform: uppercase;
+  margin: 0px 0px 20px 0px;
+}
+
+#header p {
+	font-size: 16px;
+	margin: 0px;
+}
+
+#main {
+	padding: 20px;
 }
 
 h2 {
@@ -60,27 +40,53 @@ h2 {
   margin: 4px 0;
   font-weight: normal;
   padding: 0;
-  color: #999999;
+  color: #cccccc;
   font-name: Courier;
   line-height: 2.8em;
 }
 
-a {
+#main a {
 	color: #cccccc;
 	text-decoration: none;
 }
 
-a:visited, a:hover, a:active {
+#main a:hover {
 	color: #000000;
 }
 
-img#frame {
+.frame {
 	padding: 100px;
 	background: #fcfcfc;
 	border: 1px solid #cccccc;
 	box-shadow: 1px 1px 30px #cccccc;
 }
 
+.credit {
+	color: #999999;
+	font-family: arial;
+	font-size: 12px;
+	margin-left: 15px;
+}
+
 .line {
 	margin: 25px 0;
 	border-bottom: 1px #cccccc solid;
+}
+
+#footer {
+	padding: 20px;
+	text-align: right;
+	font-family: arial;
+	font-size: 12px;
+	color: black
+}
+
+#footer .twitterLink {
+	color: black;
+	text-decoration: none;
+}
+
+#footer .twitterLink:hover {
+	color: red;
+}
+
