@@ -1,0 +1,122 @@
+body {
+	font-family: Lato, arial, san-serif;
+}
+
+.container {
+	max-width: 720px;
+	padding: 54px;
+	border-left: 6px solid #dddddd;
+}
+
+header {
+	color: #df1f00;
+	font-size: 60px;
+}
+
+.subhead {
+	color: black;
+	font-size: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#nav {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+#nav .navLink {
+	display: inline;
+	padding-right: 15px;
+	font-size: 20px;
+}
+
+#nav .navLink a {
+	color: #dddddd;
+	text-decoration: none;
+	border-bottom: 1px solid #dddddd;
+}
+
+#nav .navLink a:hover {
+	color: black;
+	border-bottom: 1px solid black;
+}
+
+article {
+	color: #444444;
+	line-height: 1.5;
+	max-width: 720px;
+	padding-top: 5px;
+}
+
+.date, .title {
+	font-size: 36px;
+}
+
+.date {
+	color: #cccccc;
+	margin-bottom: 0px;
+}
+
+.title {
+	color: black;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.photo {
+	max-width: 720px;
+}
+
+.continue {
+	font-weight: bold;
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+.continue a {
+	color: #DD0000;
+	text-decoration: none;
+}
+
+.continue a:hover {
+	color: #aa0000;
+}
+
+hr {
+	border: 1px solid #dddddd;
+}
+
+#footerNav {
+	list-style: none;
+	padding-left: 0px;
+}
+
+#footerNav .navLink {
+	display: inline;
+}
+
+#footerNav .navLink a {
+	color: #DD0000;
+	text-decoration: none;
+	padding-right: 7px;
+	padding-left: 5px;
+	border-right: 1px solid #cccccc;
+}
+
+#footerNav .navLink a:hover {
+	color: #aa0000;
+}
+
+#footerNav .navLink .firstItem a {
+	padding-left: 0px;
+}
+
+#footerNav .navLink .lastItem a {
+	border-right: 0px;
+}
+
+.copyright {
+	color: #cccccc;
+}
+
