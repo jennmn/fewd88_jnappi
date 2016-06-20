@@ -23,16 +23,17 @@ body {
   line-height: .7;
   letter-spacing: -2px;
   text-transform: uppercase;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 10px;
 }
 
 #header p {
 	font-size: 16px;
 	margin: 0px;
+	margin: 0px 0px 0px 10px;
 }
 
 #main {
-	padding: 20px;
+	padding: 25px;
 }
 
 h2 {

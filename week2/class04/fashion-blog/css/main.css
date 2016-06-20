@@ -68,6 +68,10 @@ article {
 	max-width: 720px;
 }
 
+.photo img {
+	max-width: 100%;
+}
+
 .continue {
 	font-weight: bold;
 	text-align: right;
