@@ -60,6 +60,8 @@ h2 {
 	background: #fcfcfc;
 	border: 1px solid #cccccc;
 	box-shadow: 1px 1px 30px #cccccc;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 .credit {
