@@ -2,3 +2,136 @@
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Merriweather', serif;
 // font-family: 'Source Sans Pro', sans-serif;
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: black;
+  font-size: 18px;
+  line-height: 1.3;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #eeeeee;
+}
+
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/* --------------- HEADER --------------- */
+
+header {
+	background-color: black;
+	height: 80px;
+	width: 100%;
+	overflow: hidden;
+}
+
+h1#logo {
+	font-family: 'Merriweather', serif;
+	font-size: 24px;
+	color: #ffff00;
+	padding-top: 25px;
+}
+
+
+/* ------------- NAVIGATION ------------- */
+
+#primaryNav {
+	padding-top: 30px;
+}
+
+#primaryNav li {
+	display: inline-block;
+  	padding: 0px 15px 0px 15px;
+}
+
+#primaryNav a.boldNav {
+	font-family: "Oswald", san-serif;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+#primaryNav a {
+	font-family: "Source Sans Pro", san-serif;
+	text-decoration: none;
+	color: white;
+}
+
+
+
+/* ------------- TAGLINE ------------- */
+
+#tagline {
+	background-color: #c6c6c6;
+	height: 50px;
+	width: 100%;
+	overflow: hidden;
+}
+
+p.tagline {
+	font-family: "Merriweather", serif;
+	color: black;
+	font-style: italic;
+	text-align: center;
+	padding-top: 15px;
+}
+
+span.strike {
+	text-decoration: line-through;
+	color: gray;
+}
+
+span.tagUnderline {
+	border-bottom: 2px solid yellow;
+}
+
+
+/* ------------- MAIN CONTENT ------------- */
+
+#main {
+	background-image: url("../img/coworking.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 100%;
+}
+
+div.overlay {
+	background-color: rgba(255,255,255,.08);
+	width: 300px;
+}
