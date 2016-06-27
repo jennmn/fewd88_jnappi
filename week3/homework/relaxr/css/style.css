@@ -34,8 +34,13 @@ body {
   color: #033048;
   font-size: 24px;
   line-height: 1.3;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   background-color: #f0efef
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 50px;
 }
 
 
@@ -43,43 +48,42 @@ body {
 /* LAYOUT
 /*******************************************/
 
-
-/* --------------- HEADER --------------- */
-
-#headerContainer {
-  background-color: #033048;
-  margin-bottom: 70px;
-}
-
-header {
+.container {
   width: 960px;
   margin: 0 auto;
+}
+
+
+
+/* HEADER */
+
+
+header {
+  background-color: #033048;
+  padding: 25px 0px;
   overflow: hidden;
 }
 
-div.logo {
-  font-weight: 800;
-  font-size: 50px;
+header .logo {
   color: white;
-  width: 30%;
-  padding: 0px;
-  margin: 30px 0px 30px 0px;
+  float: left;
 }
 
 
-/* ------------- NAVIGATION ------------- */
+/* NAVIGATION */
 
-ul.nav {
-  padding: 0px;
-  margin: 45px 0px 45px 0px;
+nav {
+  float: right;
+  margin: 20px 0px 20px 0px;
 }
 
-li.navLink {
+nav ul li {
   display: inline-block;
+  list-style: none;
   padding: 0px 15px 0px 15px;
 }
 
-li.navLink a {
+nav ul li a {
   text-decoration: none;
   font-weight: 300;
   color: #f9e42e;
@@ -87,23 +91,18 @@ li.navLink a {
 }
 
 
-/* ---------------- BODY ---------------- */
+/* MAIN */
 
-#bodyContainer {
-  width: 960px;
-  margin: 0 auto;
+#main {
+  margin-top: 60px;
 }
 
-main {
-  max-width: 700px;
-  margin-bottom: 60px;
+#stories {
+  width: 700px;
+  margin-bottom: 50px;
 }
 
-article {
-  max-width: 100%;
-}
-
-p.articleTitle {
+article h2 {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -114,14 +113,14 @@ article img {
   max-width: 100%;
 }
 
-p.articleText {
+article p.articleText {
   font-weight: 300;
   color: #606161;
   float: right;
   margin-bottom: 30px;
 }
 
-p.articleText::first-letter {
+article p.articleText::first-letter {
   font-size: 250%;
   font-weight: 600;
   vertical-align: text-top;
@@ -130,87 +129,113 @@ p.articleText::first-letter {
   padding-right: 5px;
 }
 
-p.readMore {
+article h4 {
   font-weight: 800;
   text-align: right;
   margin: 20px 0px 30px 0px;
 }
 
+article h4 a {
+  text-decoration: none;
+  color: #033048;
 
-/* --------------- SIDEBAR --------------- */
-
-aside {
-  max-width: 240px;
 }
 
-div.categories {
+
+/* RIGHT RAIL */
+
+#rightRail {
+  width: 240px;
+}
+
+section.categories {
   margin-bottom: 40px;
 }
 
-p.sidebarTitles {
+section.categories h3 {
   font-size: 32px;
   font-weight: 800;
   padding-bottom: 5px;
 }
 
-ul.sideNav {
+section.categories ul {
   line-height: 1.4;
   padding-left: 10px;
 }
 
-li.sideNavLink a {
+section.categories ul li a.links {
+    font-weight: 300;
     text-decoration: none;
     color: #033048;
 }
 
-div.about {
-  margin-bottom: 40px;
-}
-
-p.sidebarText {
+section.categories p {
   padding-bottom: 8px;
+  font-weight: 300;
+  font-size: 22px;
 }
 
-a.learnMore {
+section.categories a {
   font-weight: 800;
   text-decoration: none;
   color: #033048;
 }
 
 
-/* --------------- SIGN UP --------------- */
+/* SIGN UP */
 
-.signupContainer {
+#signup {
   background-color: #f9e42e;
   padding: 30px;
 }
 
-div.signupButton {
-  margin: 0 auto;
+#signup .cta {
   background-color: #033048;
   width: 200px;
   padding: 10px;
   border-radius: 3px;
   text-align: center;
+  display: block;
 }
 
-a.signupText {
+#signup a {
+  margin: 0 auto;
   text-decoration: none;
   max-width: 100%;
   color: white;
   font-weight: 800;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* FOOTER */
 
-.footerContainer {
+footer {
   background-color: #121212;
-  height: 300px;
+  text-align: center;
+  padding-top: 30px;
 }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+footer .logo {
+  margin: 0 auto;
+  color: #f9e42e;
+  padding: 10px 0px 10px 0px;
+}
+
+footer ul {
+  margin: 30px 0px 30px 0px;
+}
+
+footer ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0px 20px 0px 20px;
+}
+
+.copyright {
+  color: white;
+  font-size: 20px;
+  padding: 30px 0px 30px 0px;
+}
+
 
 
 
