@@ -47,6 +47,25 @@ body {
 	margin: 0 auto;
 }
 
+button {
+    font-family: "Oswald", san-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: .5px;
+	background-color: #c6c6c6;
+	border: none;
+	padding: 10px 0px 10px 0px;
+	display: inline-block;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 3px;
+	box-shadow: 0px 2px 0px rgba(0,0,0,0.3);
+}
+
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -85,6 +104,7 @@ h1#logo {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
+	letter-spacing: .5px;
 }
 
 #primaryNav a {
@@ -129,9 +149,61 @@ span.tagUnderline {
 	background-repeat: no-repeat;
 	background-size: cover;
 	max-width: 100%;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.8);
 }
 
 div.overlay {
-	background-color: rgba(255,255,255,.08);
+	background-color: rgba(255,255,255, .80);
 	width: 300px;
+	padding: 40px;
+	box-shadow: 1px 1px 15px rgba(0,0,0,0.8);
+	margin: 40px 0px 40px 0px;
 }
+
+div.overlay h3 {
+	font-family: "Oswald", san-serif;
+	font-size: 24px; 
+	font-weight: bold;
+	letter-spacing: .5px;
+}
+
+div.overlay p {
+	margin: 10px 0px 25px 0px;
+}
+
+button.overlayButton {
+	background-color: #ffff00;
+}
+
+
+/* ------------- TOUTS ------------- */
+
+
+.toutContainer {
+	width: 100%;	
+}
+
+.tout {
+	width: 25%;
+	padding: 25px;
+	border-right: 1px solid #cccccc;
+	margin: 0px;
+	display: inline-block;
+}
+
+.toutTitle {
+	font-family: "Merriweather", serif;
+	font-size: 25px;
+}
+
+.tout p {
+	margin: 5px 0px 15px 0px; 
+}
+
+#toutThree {
+	border: none;
+}
+
+
+

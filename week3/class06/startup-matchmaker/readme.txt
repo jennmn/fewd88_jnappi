@@ -36,3 +36,20 @@ Notes:
 2) To round the button's corners, look up the border-radius CSS property
 3) Use the "rgba" color value to set the see-thru background of the "Meet your Match" element
 
+
+
+
+
+button.overlayButton {
+    font-family: "Oswald", san-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	background-color: #c6c6c6;
+	border: none
+	padding: 10px 0px 10px 0px;
+	display: inline-block;
+	cursor: pointer;
+	width: 100%;
+}
