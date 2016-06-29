@@ -145,8 +145,7 @@ span.tagUnderline {
 /* ------------- MAIN CONTENT ------------- */
 
 #main {
-	background-image: url("../img/coworking.jpg");
-	background-repeat: no-repeat;
+	background: url("../img/coworking.jpg") center center no-repeat;
 	background-size: cover;
 	max-width: 100%;
 	overflow: hidden;
@@ -155,7 +154,7 @@ span.tagUnderline {
 
 div.overlay {
 	background-color: rgba(255,255,255, .80);
-	width: 300px;
+	width: 30%;
 	padding: 40px;
 	box-shadow: 1px 1px 15px rgba(0,0,0,0.8);
 	margin: 40px 0px 40px 0px;
@@ -182,12 +181,12 @@ button.overlayButton {
 
 .toutContainer {
 	width: 100%;	
-	padding: 2%;
+	padding: 2% 0%;
 }
 
 .tout {
-	width: 29%;
-	padding: 25px;
+	width: 30%;
+	padding: 3% 2%;
 	border-right: 1px solid #cccccc;
 	margin: 0px 0px 30px 0px;
 	float: left;
@@ -203,13 +202,13 @@ button.overlayButton {
 	margin: 5px 0px 15px 0px; 
 }
 
-.tout:first-child {
-	padding-left: none;
+.toutContainer .tout:first-child {
+	padding-left: 0px;
 }
 
-.tout:last-child {
+.toutContainer .tout:last-child {
 	border: none;
-	padding-right: none;
+	padding-right: 0px;
 }
 
 /* ------------- FOOTER ------------- */
