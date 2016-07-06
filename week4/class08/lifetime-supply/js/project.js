@@ -1,13 +1,29 @@
-document.getElementById("click-me").onclick = calculate;
+// -- global variables can be used in multiple functions-- //
+var age;
+var maxAge;
+var item;
+var numPerDay;
+
+
+document.getElementById('click_me').onclick = calculate;
 
 function calculate() {
-	document.getElementById('age').value;
-	document.getElementById('max-age').value;
-	document.getElementById('item').value;
-	document.getElementById('num-per-day').value;
-	document.getElementById('solution')
-max-age
+	age = parseInt(document.getElementById('age').value);
+	maxAge = parseInt(document.getElementById('max_age').value);
+	item = document.getElementById('item').value;
+	numPerDay = parseInt(document.getElementById('num_per_day').value);
+	total_drinks = (maxAge - age) * 365 * numPerDay;
 
-document.getElementById('drink')
+	document.getElementById('solution').innerHTML = total_drinks;
+	document.getElementById('drink').innerHTML = item;
+
+	/* -- debugging (check console in browser for values) --
+	console.log(age);
+	console.log(maxAge);
+	console.log(item);
+	console.log(numPerDay);
+	*/
 
 }
+
+
