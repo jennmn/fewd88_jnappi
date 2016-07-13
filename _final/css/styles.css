@@ -163,13 +163,14 @@ header ul li a {
 /* ----- LARGE TOUTS ----- */
 
 .toutsWrapper {
-	width: 1240px;
+	/* taking this out allows images to be full width of browwser
+	max-width: 1240px;*/
 	margin: 0 auto;
 }
 
 .largeTout {
 	padding: 0% 0%;
-	margin: 0px 0px 30px 0px;
+	/*margin: 0px 0px 30px 0px;*/
 	display: inline-block;
 }
 
@@ -190,10 +191,14 @@ header ul li a {
 }
 
 .icon {
+  	/* taking out the below will allow icon to scale on browser resize
   	position: relative;
   	z-index: 1;
     top:30%;
-    left:30%;
+    left:30%;*/
+    display: block;
+    width: 25%;
+    margin: 0 auto;
     padding: 45px;
 }
 
@@ -229,16 +234,16 @@ header ul li a {
 }
 
 .tout {
-	width: 30%;
+	width: 29%;
 	padding: 0% 2%;
 	border-right: 1px solid #cccccc;
 	margin: 0px 0px 30px 0px;
 	display: inline-block;
 }
 
-.tout:first-child {
+/*.tout:first-child {
 	padding-left: 0px;
-}
+}*/
 
 .tout:last-child {
 	border: none;
