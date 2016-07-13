@@ -1,0 +1,328 @@
+//font-family: 'Rubik', sans-serif;
+//font-family: 'Quicksand', sans-serif;
+//font-family: 'Pridi', serif;
+
+/* ----- SETUP ----- */
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+
+/* ----- BASE STYLES ----- */
+
+.wrapper {
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+body {
+  color: #4A4A4A;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: 300;
+  background-color: #FFFFFF;
+}
+
+button {
+	background-color: #B83A7F;
+	padding: 12px;
+	border: none;
+	margin: 0 auto;
+	display: block;
+}
+
+button a {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'Rubik', arial, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: .5px;
+	padding: 12px;
+}
+
+.sectionTitleContainer {
+	padding-top: 4%;
+}
+
+.sectionTitleBox {
+	background-color: #FFFFFF;
+	border: 1px solid black;
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+.sectionTitleBox h5 {
+	color: black;
+	text-transform: uppercase;
+	padding: 3% 0% 2% 0%;
+	text-align: center;
+	letter-spacing: .5;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+
+/* ----- HEADER ----- */
+
+header {
+	background-color: #4E3862;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 2;
+}
+
+header h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 80px;
+	color: #FFFFFF;
+	padding-top: 25px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+header button {
+	background-color: #EDB23E;
+	position: absolute;
+	top: 20;
+	right: 20;
+	display: inline-block;
+}
+
+header button a {
+	font-family: 'Pridi', serif;
+	color: white;
+	text-transform: none;
+	font-weight: 200;
+	font-size: 20px;
+}
+
+header ul {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0px 0px 10px 0px;
+}
+
+header ul li {
+	display: inline-block;
+}
+
+header ul li a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 15px;
+	padding: 15px;
+}
+
+
+/* ----- INTRO ----- */
+
+#intro {
+	margin: 0 auto;
+	max-width: 900px;
+	padding-top: 10%;
+}
+
+#intro h2 {
+	text-align: center;
+	font-family: 'Pridi', serif;
+	font-weight: 200;
+	font-size: 38px;
+	color: #4E3862;
+	letter-spacing: 1.5;
+	padding: 5% 0% 0% 0%;
+}
+
+#intro p {
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.5;
+	color: black;
+	padding: 1% 0% 4% 0%;
+}
+
+
+/* ----- LARGE TOUTS ----- */
+
+.toutsWrapper {
+	width: 1240px;
+	margin: 0 auto;
+}
+
+.largeTout {
+	padding: 0% 0%;
+	margin: 0px 0px 30px 0px;
+	display: inline-block;
+}
+
+.grapesTout {
+	background: url("../images/AboutGrapes_hpimage.jpg") left center no-repeat;
+	background-size: cover;
+	width: 50%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.stylesTout {
+	background: url("../images/AboutStyles_hpimage.jpg") right center no-repeat;
+	background-size: cover;
+	width: 50%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.icon {
+  	position: relative;
+  	z-index: 1;
+    top:30%;
+    left:30%;
+    padding: 45px;
+}
+
+.largeTout p {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 1;
+	padding: 0% 0% 4% 50%;
+	letter-spacing: 2;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.largeTout span {
+	font-family: 'Pridi', serif;
+	text-transform: none;
+	font-size: 70px;
+	padding-left: 8%;
+}
+
+
+/* ----- TASTING ----- */
+
+#tastingWine, #pairingFood {
+	background-color: #F5F5F5;
+	overflow: hidden;
+	width: 100%;
+}
+
+.toutContainer {
+	/*width: 100%;*/
+	padding: 2% 0%;
+}
+
+.tout {
+	width: 30%;
+	padding: 0% 2%;
+	border-right: 1px solid #cccccc;
+	margin: 0px 0px 30px 0px;
+	display: inline-block;
+}
+
+.tout:first-child {
+	padding-left: 0px;
+}
+
+.tout:last-child {
+	border: none;
+	padding-right: 0px;
+}
+
+.toutContainer h2 {
+	text-align: center;
+	font-family: 'Pridi', serif;
+	font-weight: 200;
+	font-size: 36px;
+	color: black;
+	padding: 0px 0px 10px 0px;
+}
+
+.toutContainer p {
+	padding: 0px 0px 15px 0px;
+}
+
+
+/* ----- PAIRING ----- */
+
+.pairingTout {
+	width: 31%;
+    /* padding: 0% 2%; */
+    margin: 0% 3% 2% 0%;
+    display: inline-block;
+}
+
+.pairingTout:first-child {
+	margin-left: 0%;
+}
+
+.pairingTout:last-child {
+	margin-right: 0%;
+}
+
+.vegTout {
+	background: url("../images/veg_image.jpg") left center no-repeat;
+	background-size: cover;
+}
+
+.chickenTout {
+	background: url("../images/chicken_image.jpg") center center no-repeat;
+	background-size: cover;
+}
+
+.chocolateTout {
+	background: url("../images/chocolate_image.jpg") right center no-repeat;
+	background-size: cover;
+}
+
+.pairingTout h2 {
+	text-align: center;
+	font-family: 'Pridi', serif;
+	font-weight: 200;
+	font-size: 36px;
+	color: white;
+	padding: 20% 0% 3% 0%;
+}
+
+.pairingTout p {
+	padding: 0% 15% 20% 15%;
+	color: white;
+	text-align: center;
+}
+
+/* ----- APP TOUT ----- */
+
+
+/* ----- FOOTER ----- */
+
+
+footer {
+	background-color: black;
+	width: 100%;
+	overflow: hidden;
+}
+
+footer p {
+	font-size: 13px;
+	letter-spacing: 1.5;
+	text-align: center;
+	color: white;
+	padding: 2% 0%;
+}
+
