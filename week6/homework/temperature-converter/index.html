@@ -6,8 +6,28 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
 
-	<script type="text/javascript" src="js/project.js"></script>
+<body>
+	<div id="container">
+		<div class="wrapper">
+			<h1>Temperature Converter</h1>
+			<h3>Enter a  number and select either Celcius or Farenheit.</h3>
+			<br>
+			<input type="text" id="temp" placeholder=""/><br>
+			<input type="radio" name="temptype" value="celcius" id="celcius"> Celcius
+			<input type="radio" name="temptype" value="farenheit" id="farenheit"> Farenheit <br><br>
+			<button id="submit">Submit</button>
+
+			<div class="wrapper" id="output">
+				<span id="degreesNum1">______ </span> degrees <span id="tempType1">_____________</span>
+				<br> <span id="equalTo">is equal to</span> <br>
+				<span id="degreesNum2">______ </span> degrees <span id="tempType2">_____________</span>.
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/project.js"></script>
+	</div>
 </body>
+
 </html>

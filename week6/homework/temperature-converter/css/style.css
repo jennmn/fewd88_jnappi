@@ -1,0 +1,43 @@
+body {
+	text-align: center;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 90%;
+}
+
+input, button {
+	font-size: 18px;
+	padding: 1%;
+	text-align: center;
+}
+
+input[type="text"] {
+	max-width: 30px;
+	margin-bottom: 2%;
+}
+
+input[type="radio"] {
+  margin: 0 2px 0 2%;
+}
+
+button {
+	border: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: gray;
+	margin-bottom: 2%;
+}
+
+#output {
+	line-height: 25px;
+}
+
+#degreesNum1, #degreesNum2, #tempType1, #tempType2 {
+	color: lightgray;
+}
+
+#equalTo {
+	font-weight: bold;
+}
