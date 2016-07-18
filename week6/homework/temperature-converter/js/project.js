@@ -1,20 +1,26 @@
 // can't figure out: 
 	// have the reset function run if the input box is cleared
-	// get the button to become 'active' when input has a alue and a button is checked.
 
 
-
-if ($('input:text').is(":empty")) {
-	reset();
+function reset(){
+$('#tempType1').html('__________');
+$('#tempType2').html('__________');
+$('#degreesNum1').html('____');	
+$('#degreesNum2').html('____');
 }
 
-if($('#celcius').is(':checked')) { 
-		$('#submit').css('background-color', 'lightblue');
-}
+// if ($('input:text').is(":empty")) {
+// 	reset();
+// }
 
-if($('#farenheit').is(':checked')) { 
-		$('#submit').css('background-color', 'lightblue');
-}
+
+$('#celcius').click(function() { 
+	$('#submit').css('background-color', 'lightblue').css('color', 'black');
+})
+
+$('#farenheit').click(function() { 
+	$('#submit').css('background-color', 'lightblue').css('color', 'black');
+})
 
 
 
@@ -38,17 +44,10 @@ $('#submit').click(function(){
 		$('#tempType1').html('farenheit').css('color', 'black');
 		$('#tempType2').html('celcius').css('color', 'black');
 		$('#degreesNum2').html(toFarenheit.toFixed(2)).css('color', 'black');
-
-	} else {
-		reset;
 	}
 
+	// if ($('input:text').is(":empty")) {
+	// 	reset();
+	// }
+
 });
-
-
-function reset(){
-$('#tempType1').html('_____________');
-$('#tempType2').html('_____________');
-$('#degreesNum1').html('______');	
-$('#degreesNum2').html('______');
-}
