@@ -1,6 +1,5 @@
 // can't figure out: 
 	// have the reset function run if the input box is cleared
-	// cap the number of decimal places shown
 	// get the button to become 'active' when input has a alue and a button is checked.
 
 
