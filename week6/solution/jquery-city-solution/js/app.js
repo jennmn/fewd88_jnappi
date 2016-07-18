@@ -11,6 +11,11 @@ var bigImg = $('#bigimage')
 // 	bigImg.attr('src', 'img/2.jpg')
 // })
 
+$('#second')
+.click(fuction(){
+ $('#bigimage').attr('src','img/2.jpg').attr('alt','City2')
+});
+
 // $('#third').click(function () {
 // 	bigImg.attr('src', 'img/3.jpg')
 // })
@@ -21,7 +26,11 @@ var bigImg = $('#bigimage')
 
 
 // Refactored with $(this)
-$('.thumb').click(function () {
-	var newSrc = $(this).attr('src')
-	bigImg.attr('src', newSrc)
-})
+// $('.thumb').click(function () {
+// 	var newSrc = $(this).attr('src')
+// 	bigImg.attr('src', newSrc)
+// })
+
+
+
+
