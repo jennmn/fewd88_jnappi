@@ -3,6 +3,8 @@
 	// cap the number of decimal places shown
 	// get the button to become 'active' when input has a alue and a button is checked.
 
+
+
 if ($('input:text').is(":empty")) {
 	reset();
 }
@@ -20,6 +22,8 @@ if($('#farenheit').is(':checked')) {
 $('#submit').click(function(){
 
 	var tempInput = parseInt($('#temp').val());
+	var toCelcius = (tempInput * 1.8) + 32;
+	var toFarenheit = (tempInput - 32) / 1.8;
 
 
 	$('#degreesNum1').html(tempInput).css('color', 'black');
@@ -29,12 +33,12 @@ $('#submit').click(function(){
 		//alert("it's checked"); 
 		$('#tempType1').html('celcius').css('color', 'black');
 		$('#tempType2').html('farenheit').css('color', 'black');
-		$('#degreesNum2').html((tempInput * 1.8) + 32).css('color', 'black');
+		$('#degreesNum2').html(toCelcius.toFixed(2)).css('color', 'black');
 
 	} else if ($('#farenheit').is(':checked')) {
 		$('#tempType1').html('farenheit').css('color', 'black');
 		$('#tempType2').html('celcius').css('color', 'black');
-		$('#degreesNum2').html((tempInput - 32) / 1.8).css('color', 'black');
+		$('#degreesNum2').html(toFarenheit.toFixed(2)).css('color', 'black');
 
 	} else {
 		reset;
