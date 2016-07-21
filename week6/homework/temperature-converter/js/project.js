@@ -2,17 +2,12 @@
 	// have the reset function run if the input box is cleared
 
 
-function reset(){
-$('#tempType1').html('__________');
-$('#tempType2').html('__________');
-$('#degreesNum1').html('____');	
-$('#degreesNum2').html('____');
-}
-
-// if ($('input:text').is(":empty")) {
-// 	reset();
-// }
-
+	function reset(){
+		$('#tempType1').html('__________');
+		$('#tempType2').html('__________');
+		$('#degreesNum1').html('____');	
+		$('#degreesNum2').html('____');
+	}
 
 $('#celcius').click(function() { 
 	$('#submit').css('background-color', 'lightblue').css('color', 'black');
@@ -44,10 +39,11 @@ $('#submit').click(function(){
 		$('#tempType1').html('farenheit').css('color', 'black');
 		$('#tempType2').html('celcius').css('color', 'black');
 		$('#degreesNum2').html(toFarenheit.toFixed(2)).css('color', 'black');
-	}
+	};
 
-	// if ($('input:text').is(":empty")) {
-	// 	reset();
-	// }
+	if  ($('input').val() == ''){
+		$("input:radio").attr("checked", false);
+		reset();
+	};
 
 });

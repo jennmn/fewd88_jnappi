@@ -19,25 +19,16 @@
 
 $(document).ready(function() {
 
-	$('#city-type').change(function(){
+	// 1
+	$('#city-type').change(function () {
 
+		// 4
 		var city = $('#city-type').val();
 
+		// 5
 		$('body').removeClass();
 
-		$('body').addClass(city);
-
+		// 6
+		$('body').addClass(city)
 	});
-
 });
-
-
-// Bonus 1: Apply the concept of $(this) - think about what element is causing .change() to fire
-// var city = $(this).val();
-
-// Bonus 2: Instead of using .removeClass and .addClass, use only .toggleClass on <body>
-// $('body').toggleClass(city)
-
-// Hint: you may have to use the .attr() method to grab the current class on <body>
-// var previousCity = $('body').attr('class')
-// $('body').toggleClass(previousCity + " " + currentCity)

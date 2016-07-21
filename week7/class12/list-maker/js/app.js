@@ -12,6 +12,23 @@
 
 $(document).ready(function () {
 
+	$('#clickme').click(function(){
+
+		var newItem = $('#item').val();
+
+		appendItem(newItem);
+
+		$('#item').val('')
+
+	});
+
+	function appendItem (item) {
+		$('#list').append('<li>' + item + '</li>' );
+	}
+
+	
+
+
 	// 1. Attach a .click() event to #clickme; attach an anonymous function to the .click()
 	// 1A. This anonymous function should create a variable, newItem equal to the value of #item
 	// 1B. This anonymous function should call a separate function, appendItem, and pass it the variable newItem
