@@ -308,7 +308,7 @@ header.small ul li a.appButton {
     padding: 10% 0 4% 0;
 }
 
-.heroTout p {
+.grapesTitle, .stylesTitle {
 	font-family: 'Pridi', serif;
 	color: white;
 	letter-spacing: 2;
@@ -321,11 +321,17 @@ header.small ul li a.appButton {
   	background: -moz-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
 }
 
-.heroTitleAlt {
+.grapesDec, .stylesDec {
 	font-size: 18px;
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 300;
     letter-spacing: 1;
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
+	text-align: center;
+	padding: 1% 0 4% 0;
+	background: linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
+  	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
+  	background: -moz-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
 }
 
 
