@@ -15,4 +15,21 @@
 
 $(document).ready(function () {
 
-})
+	var total = 0;
+
+	$('#entry').submit(function (event){
+		event.preventDefault();
+
+		var newEntry = $('#newEntry').val();
+
+		parseFloat(newEntry);
+
+		$('#entries').append('<tr><td></td><td>' + newEntry + '</td></tr>');
+
+		total = total + newEntry;
+
+		$('#total').text('$' + total);
+
+		$('#newEntry').val('');
+	});
+});
