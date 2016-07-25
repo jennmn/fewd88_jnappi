@@ -18,16 +18,14 @@ $(window).scroll(function(){
 });
 
 
+
+
+
 // --- HERO TOUTS --- //
 // --- pseudocode--- //
 // on hover (on click for mobile?), slide in from bottom, a gradient (60% black to 0% black)
 // if hover grapesTout, fade out #grapesTitle, change html of #grapesTitle to 'Learn all about the different types of grapes.', change style of #grapesTitle, fade in #grapesTitle
 // if hover stylesTout, fade out #stylessTitle, change html of #stylesTitle to 'Learn all about the different styles of wine.', change style of #stylesTitle, fade in #stylessTitle
-    // -- change to style -- //
-    // font-size: 18px;
-    // font-family: 'Rubik', Arial, sans-serif;
-    // font-weight: 300;
-    // letter-spacing: 1;
 
 $('.grapesTout').hover(function(){
     // alert('test');

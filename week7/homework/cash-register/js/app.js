@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 		var newEntry = $('#newEntry').val();
 
-		parseFloat(newEntry);
+		newEntry = parseFloat(newEntry);
 
 		$('#entries').append('<tr><td></td><td>' + newEntry + '</td></tr>');
 
