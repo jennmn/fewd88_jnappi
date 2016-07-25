@@ -58,7 +58,7 @@ button:hover {
 }
 
 .sectionTitleContainer {
-	padding-top: 5%;
+	padding-top: 4%;
 }
 
 .sectionTitleBox {
@@ -135,8 +135,8 @@ header ul li a.standardNav:before {
 
 header ul li a.standardNav:hover:before {
 	visibility: visible;
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 /* ----- LARGE CLASS ----- */
@@ -271,7 +271,7 @@ header.small ul li a.appButton {
 }
 
 
-/* ----- HERO TOUTS ----- */
+/* ----- LARGE TOUTS ----- */
 
 .toutsWrapper {
 	/* taking this out allows images to be full width of browwser
@@ -279,7 +279,7 @@ header.small ul li a.appButton {
 	margin: 0 auto;
 }
 
-.heroTout {
+.largeTout {
 	padding: 0% 0%;
 	/*margin: 0px 0px 30px 0px;*/
 	display: inline-block;
@@ -302,47 +302,34 @@ header.small ul li a.appButton {
 }
 
 .icon {
+  	/* taking out the below will allow icon to scale on browser resize
+  	position: relative;
+  	z-index: 1;
+    top:30%;
+    left:30%;*/
     display: block;
-    max-width: 25%;
+    max-width: 35%;
     margin: 0 auto;
-    padding: 10% 0 4% 0;
+    padding: 10%;
 }
 
-.heroTout p {
-	font-family: 'Pridi', serif;
+.largeTout p {
 	color: white;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 1;
+	padding: 0% 0% 4% 50%;
 	letter-spacing: 2;
-	text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
-	font-size: 6vw;
-	text-align: center;
-	padding: 1% 0 4% 0;
-	background: linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
-  	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
-  	background: -moz-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+	font-size: 1.5vw;
 }
 
-.heroTitleAlt {
-	font-size: 18px;
-    font-family: 'Rubik', Arial, sans-serif;
-    font-weight: 300;
-    letter-spacing: 1;
-}
-
-
-/****media query****/
-@media (max-width: 700px) {
-	.grapesTout {
-		width: 100%; 
-	}
-	.stylesTout {
-		width: 100%; 
-	}
-	.icon {
-		max-width: 30%;
-	}
-	.heroTout p {
-		font-size: 12vw;
-	}
+.largeTout span {
+	font-family: 'Pridi', serif;
+	text-transform: none;
+	/*font-size: 60px;*/
+	padding-left: 8%;
+	font-size: 3em;
 }
 
 
@@ -352,7 +339,6 @@ header.small ul li a.appButton {
 	background-color: #F5F5F5;
 	overflow: hidden;
 	width: 100%;
-	padding-bottom: 1%;
 }
 
 .toutContainer {
@@ -362,217 +348,140 @@ header.small ul li a.appButton {
 
 .tout {
 	width: 29%;
-	padding: 0% 2.25%;
+	padding: 0% 2%;
 	border-right: 1px solid #cccccc;
 	margin: 0px 0px 30px 0px;
 	display: inline-block;
-	float: left;
 }
 
-.tout:last-child {
-	border: none;
-	padding-right: 0px;
-}
+/*.tout:first-child {
+	padding-left: 0px;
+	}*/
 
-.toutContainer h2 {
-	text-align: center;
-	font-family: 'Pridi', serif;
-	font-weight: 200;
-	font-size: 36px;
-	color: black;
-	padding: 0px 0px 10px 0px;
-}
-
-.tout p {
-	padding: 0px 0px 15px 0px;
-	text-align: center;
-}
-
-/****media query****/
-@media (max-width: 700px) {
-	.tout {
-		width: 85%;
-    	border: none;
-    	display: block;
-    	margin: 0 auto 30px auto;
-    	float: none;
+	.tout:last-child {
+		border: none;
+		padding-right: 0px;
 	}
+
 	.toutContainer h2 {
-		padding: 0;
-	}
-	.toutContainer p {
+		text-align: center;
+		font-family: 'Pridi', serif;
+		font-weight: 200;
+		font-size: 36px;
+		color: black;
 		padding: 0px 0px 10px 0px;
 	}
-}
 
-/* ----- PAIRING ----- */
-
-.pairingTout {
-	width: 32%;
-	/* padding: 0% 2%; */
-	margin: 0% 2% 4% 0%;
-	display: inline-block;
-	position: relative;
-	height: 270px;
-}
-
-.pairingTout:last-child {
-	margin-right: 0%;
-}
-
-.vegTout {
-	background: url("../images/veg_image.jpg") left center no-repeat;
-	background-size: 100%;
-	-webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;
-}
-
-.vegToutAlt {
-	background: url("../images/veg_image_darker.jpg") left center no-repeat;
-	background-size: 100%;
-	-webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;
-}
-
-.chickenTout {
-	background: url("../images/chicken_image.jpg") center center no-repeat;
-	background-size: 100%;
-}
-
-.chickenToutAlt {
-	background: url("../images/chicken_image_darker.jpg") center center no-repeat;
-	background-size: 100%;
-}
-
-.chocolateTout {
-	background: url("../images/chocolate_image.jpg") right center no-repeat;
-	background-size: 100%;
-}
-
-.chocolateToutAlt {
-	background: url("../images/chocolate_image_darker.jpg") right center no-repeat;
-	background-size: 100%;
-}
-
-.pairingTout h2 {
-	text-align: center;
-	font-family: 'Pridi', serif;
-	font-weight: 200;
-	font-size: 40px;
-	color: white;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
-	/*padding: 25% 0% 3% 0%;*/
-	position: relative;
-    top: 33%;
-}
-
-.pairingTout p {
-	padding: 0% 10% 5% 10%;
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
-    position: relative;
-    top: 25%;
-    opacity: 0;
-}
-
-/****media query****/
-@media (max-width: 700px) {
-	.pairingTout {
-		width: 85%;
-    	border: none;
-    	display: block;
-    	margin: 0 auto 30px auto;
-    	float: none;
+	.toutContainer p {
+		padding: 0px 0px 15px 0px;
 	}
-	.pairingTout:last-child {
-		/* --- how do i remove the 0& right margin? --- */
+
+
+	/* ----- PAIRING ----- */
+
+	#toutContainer div {
+		width: 32%;
+		/* padding: 0% 2%; */
+		margin: 0% 2% 4% 0%;
+		display: inline-block;
+		height: 290px;
+		overflow: hidden;
+		position: relative;
 	}
-}
+
+	#toutContainer div:last-child {
+		margin-right: 0%;
+	}
+
+	#toutContainer .veg {
+		background: url("../images/veg_image.jpg") left center no-repeat;
+		background-size: 100%
+	}
+
+	#toutContainer .chicken {
+		background: url("../images/chicken_image.jpg") center center no-repeat;
+		background-size: 100%
+	}
+
+ 	#toutContainer .chocolate {
+		background: url("../images/chocolate_image.jpg") right center no-repeat;
+		background-size: 100%
+	}
 
 
-/* ----- APP TOUT ----- */
+	#toutContainer div p {
+		ine-height: 28px;
+  		text-align: center;
+  		position: absolute;
+  		color: white;
+  		margin: 0;
+  		height: 100%;
+  		background-color: rgba(0, 0, 0, .5);
+  		text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
+	}
 
-#appTout #appCopy {
-	margin-left: 10%;
-}
+	#toutContainer div .title {
+		font-family: 'Pridi', serif;
+		font-weight: 200;
+		font-size: 40px;
+		/*padding: 20% 0% 3% 0%;*/
+	}
 
-#appTout h2 {
-	font-family: 'Pridi', serif;
-	font-weight: 200;
-	font-size: 38px;
-	color: black;
-	letter-spacing: 1.5;
-	line-height: 45px;
-	padding: 5% 0% 1% 0%;
-	margin-top: 5%;
-}
-
-#appTout p {
-	padding-top: 2%;
-}
-
-#appTout .bullets {
-	padding: 2% 0% 0% 4%;
-	line-height: 30px;
-}
-
-.appStoreBadge {
-	padding-top: 4%;
-}
-
-#textLink {
-	margin: 2% 0 0 0;
-}
-
-#textLink p {
-	font-weight: 500;
-	font-size: 14px;
-}
-
-#textLink input {
-	padding: 2%;
-	font-size: 14px;
-	margin-top: 2%
-}
-
-#textLink button {
-	margin: 0;
-	display: inline-block;
-	margin-left: 1%;
-}
-
-#confirm {
-	font-size: 12px;
-	opacity: 0;
-}
-
-#alert {
-	font-size: 12px;
-	color: red;
-	opacity: 0;
-}
-
-.appImage {
-	margin: 4% 10% 0% 0%;
-	max-width: 100%;
-}
+	#toutContainer div .copy {
+		/*padding: 0% 15% 20% 15%;*/
+		opacity: 1;
+	}
 
 
-/* ----- FOOTER ----- */
+	/* ----- APP TOUT ----- */
+
+	#appTout #appCopy {
+		margin-left: 10%;
+	}
+
+	#appTout h2 {
+		font-family: 'Pridi', serif;
+		font-weight: 200;
+		font-size: 38px;
+		color: black;
+		letter-spacing: 1.5;
+		line-height: 45px;
+		padding: 5% 0% 2% 0%;
+		margin-top: 5%;
+	}
+
+	#appTout p {
+		padding-top: 3%;
+	}
+
+	#appTout .bullets {
+		padding: 2% 0% 0% 4%;
+		line-height: 30px;
+	}
+
+	.appStoreBadge {
+		padding-top: 5%;
+	}
+
+	.appImage {
+		margin: 4% 10% 0% 0%;
+	}
 
 
-footer {
-	background-color: black;
-	width: 100%;
-	overflow: hidden;
-}
+	/* ----- FOOTER ----- */
 
-footer p {
-	font-size: 13px;
-	letter-spacing: 1.5;
-	text-align: center;
-	color: white;
-	padding: 2% 0%;
-}
+
+	footer {
+		background-color: black;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	footer p {
+		font-size: 13px;
+		letter-spacing: 1.5;
+		text-align: center;
+		color: white;
+		padding: 2% 0%;
+	}
 

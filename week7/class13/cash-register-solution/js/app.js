@@ -26,7 +26,7 @@ $(document).ready(function () {
 		var newEntry = $('#newEntry').val();
 
 		// 4: call parseFlot on newEntry to transform it from a string to a number
-		newEntry = parseFloat(newEntry);
+		parseFloat(newEntry);
 
 		// 5: append a new <tr> to #entries
 		$('#entries').append('<tr><td></td><td>' + newEntry + '</td></tr>');

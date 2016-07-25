@@ -26,6 +26,10 @@ $(document).ready(function () {
 
 		$('#entries').append('<tr><td></td><td>' + newEntry + '</td></tr>');
 
+		total = total + newEntry;
+
+		$('#total').text('$' + total);
+
 		$('#newEntry').val('');
 	});
 });
