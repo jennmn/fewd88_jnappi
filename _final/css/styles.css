@@ -20,7 +20,7 @@
 /* ----- BASE STYLES ----- */
 
 .wrapper {
-	max-width: 1240px;
+	max-width: 80%px;
 	margin: 0 auto;
 }
 
@@ -420,7 +420,7 @@ header.small ul li a.appButton {
 /* ----- PAIRING ----- */
 
 .pairingTout {
-	width: 32%;
+	width: 30%;
 	/* padding: 0% 2%; */
 	margin: 0% 2% 4% 0%;
 	display: inline-block;

@@ -1,5 +1,5 @@
 .container {
-	width: 960px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -32,6 +32,10 @@ section {
 
 article {
 	background-color: white;
+	width: 48%;
+	display: inline-block;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 /* targets the 1st article; nth-child(2) would target the 2nd article*/
