@@ -305,33 +305,36 @@ header.small ul li a.appButton {
     display: block;
     max-width: 25%;
     margin: 0 auto;
-    padding: 10% 0 4% 0;
+    padding: 10% 0 6% 0;
 }
 
 .grapesTitle, .stylesTitle {
 	font-family: 'Pridi', serif;
-	color: white;
-	letter-spacing: 2;
-	text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
-	font-size: 6vw;
-	text-align: center;
-	padding: 1% 0 4% 0;
-	background: linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
+    color: white;
+    letter-spacing: 2;
+    line-height: 26px;
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
+    font-size: 6vw;
+    text-align: center;
+    padding: 1% 0 4% 0%;
+	/*background: linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
   	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
-  	background: -moz-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
+  	background: -moz-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));*/
 }
 
 .grapesDec, .stylesDec {
-	font-size: 18px;
+	color: white;
+    font-size: 1.5vw;
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 300;
     letter-spacing: 1;
     text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
-	text-align: center;
-	padding: 1% 0 4% 0;
+    text-align: center;
+    padding: 4% 0 4% 0;
 	background: linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
   	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
   	background: -moz-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
+  	opacity: 0;
 }
 
 
@@ -344,10 +347,13 @@ header.small ul li a.appButton {
 		width: 100%; 
 	}
 	.icon {
-		max-width: 30%;
+		max-width: 25%;
 	}
-	.heroTout p {
+	.grapesTitle, .stylesTitle {
 		font-size: 12vw;
+	}
+	.grapesDec, .stylesDec {
+		font-size: 3vw;
 	}
 }
 
@@ -492,7 +498,7 @@ header.small ul li a.appButton {
     	float: none;
 	}
 	.pairingTout:last-child {
-		/* --- how do i remove the 0& right margin? --- */
+		margin: 0 auto;
 	}
 }
 

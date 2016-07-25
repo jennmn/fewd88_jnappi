@@ -31,8 +31,11 @@ $(window).scroll(function(){
 
 $('.grapesTout').hover(function(){
     // alert('test');
-    $('.grapesDec').html('Learn all about the different types of grapes.');
-    // $('.grapesDec').addClass('heroDec');
+    $('.grapesDec').css('opacity', '1');
+});
+
+$('.stylesTout').hover(function(){
+    $('.stylesDec').css('opacity', '1');
 });
 
 
