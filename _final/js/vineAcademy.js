@@ -1,4 +1,13 @@
 
+$(document).ready(function () {
+    // console.logs the window.width
+    $(window).resize(function () {
+        console.log($(window).width())
+    })
+})
+
+
+// -- collapsing nav -- //
 $(window).scroll(function(){
   if($(document).scrollTop()>150){ 
       console.log("scroll > 150")
