@@ -1,21 +1,20 @@
-// --- HEADER SWAP --- //
 
 $(window).scroll(function(){
-   var sticky = $('#topMenu'),
-   scroll = $(window).scrollTop();
-
-   if($(document).scrollTop() > 150 ) {
-        sticky.removeClass('large');
-        sticky.addClass('small');
-        // sticky.slideDown(2000);
-        sticky.stop().animate({'top' : '0px'}, 500);
-    }else{
-        sticky.addClass('large');
-        sticky.removeClass('small');
-        sticky.stop().animate({'top' : '-100px'}, 500);
-        sticky.removeAttr("style");
-    }
+  if($(document).scrollTop()>150){ 
+      console.log("scroll > 150")
+      $('#fixedHeader').removeClass("fixed")
+      //$('#topMenu2').stop().animate({"margin-top": "0px"}, 500)
+  }else{  
+  console.log("scroll < 250")   
+   $('#fixedHeader').addClass("fixed")
+   //$('#topMenu2').stop().animate({"margin-top": "-150px"},500)
+  }
 });
+
+
+
+
+
 
 
 
@@ -27,14 +26,14 @@ $(window).scroll(function(){
 // if hover grapesTout, fade out #grapesTitle, change html of #grapesTitle to 'Learn all about the different types of grapes.', change style of #grapesTitle, fade in #grapesTitle
 // if hover stylesTout, fade out #stylessTitle, change html of #stylesTitle to 'Learn all about the different styles of wine.', change style of #stylesTitle, fade in #stylessTitle
 
-$('.grapesTout').hover(function(){
-    // alert('test');
-    $('.grapesDec').css('opacity', '1');
-});
+// $('.grapesTout').hover(function(){
+//     // alert('test');
+//     $('.grapesDec').css('opacity', '1');
+// });
 
-$('.stylesTout').hover(function(){
-    $('.stylesDec').css('opacity', '1');
-});
+// $('.stylesTout').hover(function(){
+//     $('.stylesDec').css('opacity', '1');
+// });
 
 
 

@@ -19,8 +19,20 @@
 
 /* ----- BASE STYLES ----- */
 
+#boundary {
+	background-color: #E9E9E9;
+}
+
+#container {
+	max-width: 1600px;
+	margin: 0 auto;
+	display: block;
+	background-color: white;
+    box-shadow: 0px 1px 8px rgba(0, 0, 10, .3);
+}
+
 .wrapper {
-	max-width: 80%px;
+	max-width: 1240px;
 	margin: 0 auto;
 }
 
@@ -81,11 +93,6 @@ button:hover {
 
 /* ----- HEADER - Base Styles ----- */
 
-header {
-	background-color: #4E3862;
-	width: 100%;
-	overflow: hidden;
-}
 
 header h1 {
 	font-family: 'Quicksand', sans-serif;
@@ -139,9 +146,20 @@ header ul li a.standardNav:hover:before {
 	transform: scaleX(1);
 }
 
-/* ----- LARGE CLASS ----- */
 
-header.large h1 {
+/* ----- HEADER - LARGE ----- */
+
+#largeHeader {
+	background-color: #4E3862;
+	width: 100%;
+	overflow: hidden;
+}
+
+.large {
+	margin-top: 0px;
+}
+
+#largeHeader h1 {
 	font-size: 80px;
 	text-align: center;
 	margin: 0px;
@@ -149,7 +167,7 @@ header.large h1 {
 	line-height: 1;
 }
 
-header.large button {
+#largeHeader button {
 	background-color: #EDB23E;
 	position: absolute;
 	top: 3%;
@@ -158,7 +176,7 @@ header.large button {
 	transition: all 0.3s ease 0s;
 }
 
-header.large button a {
+#largeHeader button a {
 	font-family: 'Pridi', serif;
 	color: white;
 	text-transform: none;
@@ -166,37 +184,45 @@ header.large button a {
 	font-size: 20px;
 }
 
-header.large button:hover {
+#largeHeader button:hover {
 	background-color: #E59800;
 }
 
-header.large ul {
+#largeHeader ul {
 	margin: 0 auto;
-	padding: 20px 0px 10px 0px;
+	padding: 13px 0px 10px 0px;
 }
 
 
-header.large ul li.appButton {
+#largeHeader ul li.appButton {
 	display: none;
 }
 
-header.large ul li a.appButton {
+#largeHeader ul li a.appButton {
 	display: none;
 }
 
 
-/* ----- SMALL CLASS ----- */
+/* ----- HEADER - FIXED ----- */
 
-header.small {
-	position: fixed;
-	top: -100;
-	z-index: 99;
-	box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
-	/*transition: all 1s ease-in-out;*/
+#fixedHeader {
+    position:fixed;
+    overflow:hidden;
+    top:0;
+    height:75px;
+    width:100%;
+    background-color: #4E3862;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
+    transition: all ease .5s;
+    z-index: 99;
+    max-width: 1600px;
 }
 
-header.small h1 {
-	font-family: 'Quicksand', sans-serif;
+.fixed {
+	margin-top: -150px;
+}
+
+#fixedHeader h1 {
 	font-size: 50px;
 	color: #FFFFFF;
 	padding-top: 15px;
@@ -205,34 +231,26 @@ header.small h1 {
 	float: left;
 }
 
-header.small nav {
+#fixedHeader nav {
 	float: right;
 }
 
-header.small button {
-	display: none;
-}
-
-header.small button a {
-	display: none;
-}
-
-header.small ul {
+#fixedHeader ul {
 	padding: 12px 0px 10px 0px;
 }
 
-header.small ul li.appButton {
+#fixedHeader ul li.appButton {
 	background-color: #EDB23E;
 	padding: 10px 15px;
 	margin-left: 20px;
 	transition: all 0.3s ease-in-out 0s;
 }
 
-header.small ul li.appButton:hover {
+#fixedHeader ul li.appButton:hover {
 	background-color: #E59800;
 }
 
-header.small ul li a.appButton {
+#fixedHeader ul li a.appButton {
 	font-family: 'Pridi', serif;
 	color: white;
 	text-transform: none;
@@ -256,10 +274,11 @@ header.small ul li a.appButton {
 	text-align: center;
 	font-family: 'Pridi', serif;
 	font-weight: 200;
-	font-size: 38px;
+	font-size: 3em;
 	color: #4E3862;
 	letter-spacing: 1.5;
-	padding: 3% 0% 0% 0%;
+	line-height: 1.1;
+	padding: 3% 0% 1% 0%;
 }
 
 #intro p {
@@ -303,7 +322,7 @@ header.small ul li a.appButton {
 
 .icon {
     display: block;
-    max-width: 25%;
+    max-width: 23%;
     margin: 0 auto;
     padding: 10% 0 6% 0;
 }
@@ -314,7 +333,7 @@ header.small ul li a.appButton {
     letter-spacing: 2;
     line-height: 26px;
     text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
-    font-size: 6vw;
+    font-size: 5vw;
     text-align: center;
     padding: 1% 0 4% 0%;
 	/*background: linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
@@ -324,7 +343,7 @@ header.small ul li a.appButton {
 
 .grapesDec, .stylesDec {
 	color: white;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 300;
     letter-spacing: 1;
@@ -336,27 +355,6 @@ header.small ul li a.appButton {
   	background: -moz-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
   	opacity: 0;
 }
-
-
-/****media query****/
-@media (max-width: 700px) {
-	.grapesTout {
-		width: 100%; 
-	}
-	.stylesTout {
-		width: 100%; 
-	}
-	.icon {
-		max-width: 25%;
-	}
-	.grapesTitle, .stylesTitle {
-		font-size: 12vw;
-	}
-	.grapesDec, .stylesDec {
-		font-size: 3vw;
-	}
-}
-
 
 /* ----- TASTING ----- */
 
@@ -400,27 +398,11 @@ header.small ul li a.appButton {
 	text-align: center;
 }
 
-/****media query****/
-@media (max-width: 700px) {
-	.tout {
-		width: 85%;
-    	border: none;
-    	display: block;
-    	margin: 0 auto 30px auto;
-    	float: none;
-	}
-	.toutContainer h2 {
-		padding: 0;
-	}
-	.toutContainer p {
-		padding: 0px 0px 10px 0px;
-	}
-}
 
 /* ----- PAIRING ----- */
 
 .pairingTout {
-	width: 30%;
+	width: 32%;
 	/* padding: 0% 2%; */
 	margin: 0% 2% 4% 0%;
 	display: inline-block;
@@ -486,20 +468,6 @@ header.small ul li a.appButton {
     position: relative;
     top: 25%;
     opacity: 0;
-}
-
-/****media query****/
-@media (max-width: 700px) {
-	.pairingTout {
-		width: 85%;
-    	border: none;
-    	display: block;
-    	margin: 0 auto 30px auto;
-    	float: none;
-	}
-	.pairingTout:last-child {
-		margin: 0 auto;
-	}
 }
 
 
@@ -588,3 +556,73 @@ footer p {
 	padding: 2% 0%;
 }
 
+
+
+/**** media query ****/
+@media (max-width: 700px) {
+
+/**** header ****/
+#largeHeader h1 {
+	font-size: 55px;
+	padding: 15px 0px 0px 0px;
+}
+
+
+/**** hero touts ****/
+	.grapesTout {
+		width: 100%; 
+	}
+	.stylesTout {
+		width: 100%; 
+	}
+	.icon {
+		max-width: 25%;
+	}
+	.grapesTitle, .stylesTitle {
+		font-size: 12vw;
+	}
+	.grapesDec, .stylesDec {
+		font-size: 3vw;
+	}
+
+
+/**** tasting wine touts ****/
+	.tout {
+		width: 85%;
+    	border: none;
+    	display: block;
+    	margin: 0 auto 30px auto;
+    	float: none;
+	}
+	.toutContainer h2 {
+		padding: 0;
+	}
+	.toutContainer p {
+		padding: 0px 0px 10px 0px;
+	}
+
+
+/**** pairing ****/
+
+	.pairingTout {
+		width: 85%;
+    	border: none;
+    	display: block;
+    	margin: 0 auto 30px auto;
+    	float: none;
+	}
+	.pairingTout:last-child {
+		margin: 0 auto;
+	}
+}
+
+
+/*********************************/
+@media (max-width: 500px) {
+
+/**** header ****/
+#largeHeader h1 {
+	font-size: 40px;
+	padding: 15px 0px 0px 20px;
+	text-align: left;
+}
