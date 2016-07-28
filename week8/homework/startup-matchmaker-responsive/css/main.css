@@ -92,6 +92,35 @@ p {
 	text-transform: uppercase;
 }
 
+.hamburger{
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 45px;
+  padding: 10px 15px 0px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  display: none;
+}
+
+#mobile-nav {
+	/*display: none;*/
+	clear: both;
+	/*background-color: yellow;*/
+	width: 60%;
+}
+
+#mobile-nav a {
+	/*color: black;*/
+	text-align: right;
+	width: 90%;
+}
+
 .tagline {
 	font-family: 'Merriweather', serif;
 	text-align: center;
@@ -128,6 +157,7 @@ p {
 	padding: 4%;
 	float: right;
 	box-shadow: 0 0 5px rgba(0,0,0,.75);
+	transition: all 1s;
 }
 
 .touts {
@@ -156,4 +186,39 @@ footer {
 	background: black;
 	color: white;
 	padding: 2% 3%;
+}
+
+
+
+@media screen and (max-width: 960px) {
+	.hamburger {
+		display: block;
+	}
+	#mobile-nav {
+		display: block;
+	}
+	#largeNav {
+		display: none;
+	}
+	#page-header {
+	    padding: 0 3% 2% 3%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.blurb {
+		width: 60%;
+	}
+	.tout {
+		float: none;
+		width: 90%;
+		box-shadow: none;
+		margin: 0 auto;
+	}
+	.tout p {
+		margin: 0 0 1em 0;
+	}
+	.tout h3 {
+		margin: .75em 0 0 0;
+	}
 }
