@@ -7,6 +7,7 @@ $(document).ready(function () {
 })
 
 
+
 // -- collapsing nav -- //
 $(window).scroll(function(){
   if($(document).scrollTop()>150){ 
@@ -14,10 +15,22 @@ $(window).scroll(function(){
       $('#fixedHeader').removeClass("fixed")
       //$('#topMenu2').stop().animate({"margin-top": "0px"}, 500)
   }else{  
-  console.log("scroll < 250")   
-   $('#fixedHeader').addClass("fixed")
+      console.log("scroll < 250")   
+      $('#fixedHeader').addClass("fixed")
    //$('#topMenu2').stop().animate({"margin-top": "-150px"},500)
-  }
+}
+});
+
+
+$(window).resize(function () {
+    console.log($(window).width())
+    if($(window).width() >= 700 ){
+        $('.responsiveMenu').hide();
+    }
+})
+
+$('.hamburger').click(function(){
+    $('.responsiveMenu').toggleClass('expand');
 });
 
 

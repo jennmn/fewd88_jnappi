@@ -109,7 +109,7 @@ p {
 }
 
 #mobile-nav {
-	/*display: none;*/
+	display: none;
 	clear: both;
 	/*background-color: yellow;*/
 	width: 60%;
