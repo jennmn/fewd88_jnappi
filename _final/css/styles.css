@@ -293,7 +293,7 @@ header ul li a.standardNav:hover:before {
 }
 
 .responsiveMenu, .responsiveMenu-fixed {
-	/*display: none;*/
+	display: none;
 	transition: all 0.3s ease 0s;
 	z-index: 9999;
 }
