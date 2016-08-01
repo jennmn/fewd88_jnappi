@@ -153,7 +153,8 @@ header ul li a.standardNav:hover:before {
 .largeHeader {
 	background-color: #4E3862;
 	width: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	z-index: 9998;
 }
 
 .large {
@@ -209,7 +210,7 @@ header ul li a.standardNav:hover:before {
 
 .fixedHeader {
     position:fixed;
-    overflow:hidden;
+    /*overflow:hidden;*/
     top:0;
     /*height:75px;*/
     width:100%;

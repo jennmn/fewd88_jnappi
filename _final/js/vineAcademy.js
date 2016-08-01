@@ -21,20 +21,14 @@ $(window).scroll(function(){
 
 
 
-
-
-
-
 // -- responsive nav -- //
 $(window).resize(function () {
-    // console.log($(window).width())
     if($(window).width() >= 700 ){
         $('.responsiveMenu').hide();
     }
 })
 
 $(window).resize(function () {
-    // console.log($(window).width())
     if($(window).width() >= 900 ){
         $('.responsiveMenu-fixed').hide();
     }
@@ -51,11 +45,6 @@ $('#menuBtn-fixed').click(function(){
 
 
 
-// if responsiveMenu is showing on scroll, don't transition to fixed nav
-// if @media (max-width: 560px) - do not transition to/from fixed
-
-
-
 
 // -- responsive nav from fixed - NOT SHOWING-- //
 // $(window).resize(function () {
@@ -65,16 +54,6 @@ $('#menuBtn-fixed').click(function(){
 //         $('.responsiveMenu').hide();
 //     }
 // })
-
-
-
-
-
-
-
-
-
-
 
 
 
