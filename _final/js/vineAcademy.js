@@ -11,65 +11,84 @@ $(document).ready(function () {
 // -- collapsing nav -- //
 $(window).scroll(function(){
   if($(document).scrollTop()>150){ 
-      console.log("scroll > 150")
-      $('#fixedHeader').removeClass("fixed")
-      //$('#topMenu2').stop().animate({"margin-top": "0px"}, 500)
-  }else{  
-      console.log("scroll < 250")   
-      $('#fixedHeader').addClass("fixed")
-   //$('#topMenu2').stop().animate({"margin-top": "-150px"},500)
+    // console.log("scroll > 150")
+    $('.fixedHeader').removeClass("fixed")
+  }else{    
+    $('.fixedHeader').addClass("fixed")
+    $('.responsiveMenu-fixed').hide();
 }
 });
 
 
+
+
+
+
+
+// -- responsive nav -- //
 $(window).resize(function () {
-    console.log($(window).width())
+    // console.log($(window).width())
     if($(window).width() >= 700 ){
         $('.responsiveMenu').hide();
     }
 })
 
-$('.hamburger').click(function(){
-    $('.responsiveMenu').toggleClass('expand');
+$(window).resize(function () {
+    // console.log($(window).width())
+    if($(window).width() >= 900 ){
+        $('.responsiveMenu-fixed').hide();
+    }
+})
+
+$('#menuBtn').click(function(){
+    $('.responsiveMenu').slideToggle();
+});
+
+$('#menuBtn-fixed').click(function(){
+    $('.responsiveMenu-fixed').slideToggle();
 });
 
 
 
 
+// if responsiveMenu is showing on scroll, don't transition to fixed nav
+// if @media (max-width: 560px) - do not transition to/from fixed
+
+
+
+
+// -- responsive nav from fixed - NOT SHOWING-- //
+// $(window).resize(function () {
+//     console.log($(window).width())
+//     if($(window).width() <= 560 ){
+//         // $('.fixedHeader').removeClass("fixed")
+//         $('.responsiveMenu').hide();
+//     }
+// })
 
 
 
 
 
 
-// --- HERO TOUTS --- //
-// --- pseudocode--- //
-// on hover (on click for mobile?), slide in from bottom, a gradient (60% black to 0% black)
-// if hover grapesTout, fade out #grapesTitle, change html of #grapesTitle to 'Learn all about the different types of grapes.', change style of #grapesTitle, fade in #grapesTitle
-// if hover stylesTout, fade out #stylessTitle, change html of #stylesTitle to 'Learn all about the different styles of wine.', change style of #stylesTitle, fade in #stylessTitle
 
-// $('.grapesTout').hover(function(){
-//     // alert('test');
-//     $('.grapesDec').css('opacity', '1');
-// });
 
-// $('.stylesTout').hover(function(){
-//     $('.stylesDec').css('opacity', '1');
-// });
+
+
 
 
 
 
 // --- PAIRING TOUTS --- //
 
-$('.vegTout').hover(addOverlay);
+// $('.vegTout').hover(addOverlay);
 
-function addOverlay(){
-    // alert('test');
-    $('.vegTout').toggleClass('vegToutAlt', 5000);
-    $('#vegTitle').css('top', '28%');
-    $('#vegToutText').css('opacity', '1');
-}
+// function addOverlay(){
+//     // alert('test');
+//     $('.vegTout').toggleClass('vegToutAlt', 5000);
+//     $('#vegTitle').css('top', '28%');
+//     $('#vegToutText').css('opacity', '1');
+// }
 
 // --- pseudocode--- //
 // on hover, animate either a darker version of the image or create an overlay that animates input
@@ -77,11 +96,6 @@ function addOverlay(){
 // toutTitle slides up slightly
 
 // on rollOut, reverse the above
-
-
-
-
-
 
 
 
