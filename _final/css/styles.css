@@ -154,7 +154,7 @@ header ul li a.standardNav:hover:before {
 	background-color: #4E3862;
 	width: 100%;
 	/*overflow: hidden;*/
-	z-index: 9998;
+	z-index: 9;
 }
 
 .large {
@@ -197,27 +197,16 @@ header ul li a.standardNav:hover:before {
 }
 
 
-/*.largeHeader ul li.appButton {
-	display: none;
-}
-
-.largeHeader ul li a.appButton {
-	display: none;
-}*/
-
-
 /* ----- HEADER - FIXED ----- */
 
 .fixedHeader {
     position:fixed;
-    /*overflow:hidden;*/
     top:0;
-    /*height:75px;*/
     width:100%;
     background-color: #4E3862;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
     transition: all ease .5s;
-    z-index: 99;
+    z-index: 9;
     max-width: 1600px;
 }
 
@@ -225,7 +214,7 @@ header ul li a.standardNav:hover:before {
 	margin-top: -150px;
 }
 
-.fixedHeader h1 {
+.fixedHeader h1, {
 	font-size: 44px;
 	color: #FFFFFF;
 	padding-top: 15px;
@@ -290,13 +279,13 @@ header ul li a.standardNav:hover:before {
 	cursor: pointer;
 	outline: none;
 	display: none;
-	z-index: 99;
+	z-index: 11;
 }
 
 .responsiveMenu, .responsiveMenu-fixed {
 	display: none;
 	transition: all 0.3s ease 0s;
-	z-index: 9999;
+	z-index: 5;
 }
 
 .responsiveMenu ul, .responsiveMenu-fixed ul {
@@ -305,7 +294,7 @@ header ul li a.standardNav:hover:before {
 	width: 200px;
 	box-shadow: 0px 1px 8px rgba(0, 0, 10, .3);
 	position: fixed;
-	z-index: 9998;
+	z-index: 6;
 	right: 0;
 	padding: 13px 0px 0px 0px;
 }
@@ -357,7 +346,7 @@ header ul li a.standardNav:hover:before {
 	text-align: center;
 	font-family: 'Pridi', serif;
 	font-weight: 200;
-	font-size: 3em;
+	font-size: 2.75em;
 	color: #4E3862;
 	letter-spacing: 1.5;
 	line-height: 1.1;
@@ -366,7 +355,7 @@ header ul li a.standardNav:hover:before {
 
 #intro p {
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.15em;
 	line-height: 1.5;
 	color: black;
 	padding: 1% 0% 4% 0%;
@@ -500,15 +489,15 @@ header ul li a.standardNav:hover:before {
 .vegTout {
 	background: url("../images/veg_image.jpg") left center no-repeat;
 	background-size: 100%;
-	-webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;
+/*	-webkit-transition: opacity .25s ease;
+    -moz-transition: opacity .25s ease;*/
 }
 
 .vegToutAlt {
 	background: url("../images/veg_image_darker.jpg") left center no-repeat;
 	background-size: 100%;
-	-webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;
+/*	-webkit-transition: opacity .25s ease;
+    -moz-transition: opacity .25s ease;*/
 }
 
 .chickenTout {
@@ -691,24 +680,24 @@ footer p {
 /**** media query ****/
 @media (max-width: 700px) {
 
-/**** header ****/
+  /* header */
 	.largeHeader h1 {
 		font-size: 62px;
 		padding: 15px 0px 0px 0px;
 	}
 
 
-/**** intro ****/
+  /* intro */
 	#intro h2 {
 		font-size: 2.5em;
-		margin-top: 10%;
+		/*margin-top: 10%;*/
 	}
 	#intro p {
 		font-size: 18px;
 		padding: 2% 0% 3% 0%;
 	}
 
-/**** hero touts ****/
+  /* hero touts */
 	.grapesTout {
 		width: 100%; 
 	}
@@ -726,7 +715,7 @@ footer p {
 	}
 
 
-/**** tasting wine touts ****/
+  /* tasting wine touts */
 	.tout {
 		width: 85%;
     	border: none;
@@ -742,7 +731,7 @@ footer p {
 	}
 
 
-/**** pairing ****/
+  /* pairing */
 	.pairingTout {
 		width: 85%;
     	border: none;
@@ -759,10 +748,11 @@ footer p {
 /*********************************/
 @media (max-width: 560px) {
 
-/**** header ****/
+  /* header */
 	.largeHeader {
 		position: fixed;
 		margin-bottom: 30px;
+		box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
 	}
 	.largeHeader h1 {
 		font-size: 36px;
@@ -779,7 +769,7 @@ footer p {
 		position: fixed;
 	}
 
-/**** large header responsive ****/
+  /* large header responsive */
 	.menuBtn {
 		display: block;
 	}
@@ -787,21 +777,24 @@ footer p {
 		display: none;
 	}
 
-/**** fixed header responsive ****/
-	.largeHeader h1 {
-		font-size: 36px;
-		padding: 10px 0px 10px 20px;
-		text-align: center;
-	}
-	.menuBtn {
-		display: block;
-	}
+  /* fixed header responsive */
 	.fixedHeader h1 {
-		font-size: 36px;
+		/*font-size: 36px;
 		text-align: center;
-		float: none;
+		float: none;*/
+		display: none;
 	}
 	.fixedHeader nav {
 		display: none;
+	}
+
+  /* intro */
+	#intro h2 {
+		font-size: 2.25em;
+		margin-top: 50px;
+	}
+	#intro p {
+		font-size: 16px;
+		padding: 2% 0% 3% 0%;
 	}
 }

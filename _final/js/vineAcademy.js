@@ -13,11 +13,13 @@ $(window).scroll(function(){
   if($(document).scrollTop()>150){ 
     // console.log("scroll > 150")
     $('.fixedHeader').removeClass("fixed")
+    menuBtnFixedClicked = false;
   }else{    
     $('.fixedHeader').addClass("fixed")
     $('.responsiveMenu-fixed').hide();
 }
 });
+
 
 
 
@@ -29,52 +31,69 @@ $(window).resize(function () {
 })
 
 $(window).resize(function () {
-    if($(window).width() >= 900 ){
+    if($(window).width() >= 875 ){
         $('.responsiveMenu-fixed').hide();
     }
 })
 
-$('#menuBtn').click(function(){
-    $('.responsiveMenu').slideToggle();
+
+var menuBtnClicked = false;
+
+$('.menuBtn').click(function(){
+    if(menuBtnClicked === false){
+        $('.responsiveMenu')
+            .removeClass('fadeOutRight')
+            .addClass('animated fadeInRight')
+            .show();
+        menuBtnClicked = true;
+    }else if (menuBtnClicked === true) {
+        $('.responsiveMenu')
+            .removeClass('fadeInRight')
+            .addClass('fadeOutRight');
+        menuBtnClicked = false;
+    }
 });
 
-$('#menuBtn-fixed').click(function(){
-    $('.responsiveMenu-fixed').slideToggle();
+
+var menuBtnFixedClicked = false;
+
+$('.menuBtn-fixed').click(function(){
+    if(menuBtnFixedClicked === false){
+        $('.responsiveMenu-fixed')
+            .removeClass('fadeOutRight')
+            .addClass('animated fadeInRight')
+            .show();
+        menuBtnFixedClicked = true;
+    }else if (menuBtnFixedClicked === true) {
+        $('.responsiveMenu-fixed')
+            .removeClass('fadeInRight')
+            .addClass('fadeOutRight');
+        menuBtnFixedClicked = false;
+    }
 });
 
 
 
 
 
-// -- responsive nav from fixed - NOT SHOWING-- //
-// $(window).resize(function () {
-//     console.log($(window).width())
-//     if($(window).width() <= 560 ){
-//         // $('.fixedHeader').removeClass("fixed")
-//         $('.responsiveMenu').hide();
-//     }
-// })
 
 
 
 
 // --- PAIRING TOUTS --- //
 
-// $('.vegTout').hover(addOverlay);
+$('.vegTout').hover(addOverlay);
 
-// function addOverlay(){
-//     // alert('test');
-//     $('.vegTout').toggleClass('vegToutAlt', 5000);
+function addOverlay(){
+    // alert('test');
+    $('.vegTout')
+        .toggleClass('vegToutAlt');
+    $('.vegToutAlt')
+        .addClass('fadeIn');
 //     $('#vegTitle').css('top', '28%');
 //     $('#vegToutText').css('opacity', '1');
-// }
+}
 
-// --- pseudocode--- //
-// on hover, animate either a darker version of the image or create an overlay that animates input
-// toutText fades in
-// toutTitle slides up slightly
-
-// on rollOut, reverse the above
 
 
 
