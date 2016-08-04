@@ -22,7 +22,6 @@ $(window).scroll(function(){
 
 
 
-
 // -- responsive nav -- //
 $(window).resize(function () {
     if($(window).width() >= 700 ){
@@ -72,7 +71,9 @@ $('.menuBtn-fixed').click(function(){
     }
 });
 
-
+$('.pulseAnimation').hover(function(){
+    $('.pulseAnimation').addClass('animated pulse');
+})
 
 
 
