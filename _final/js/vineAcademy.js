@@ -87,55 +87,69 @@ $('.pulseAnimation').hover(function(){
 
 
 
+// --------------------- HERO TOUTS ---------------------- //
+
+$('.grapesTout')
+        .mouseenter(function(){
+            $('.grapesDek').css('opacity: 1')
+            $('.grapesDek').removeClass('fadeOutDown')
+            $('.grapesDek').addClass('animated fadeInUp');
+        })
+        .mouseleave(function(){
+            $('.grapesDek').css('opacity: 0')
+            $('.grapesDek').removeClass('fadeInUp')
+            $('.grapesDek').addClass('fadeOutDown');
+        })
+
+$('.stylesTout')
+        .mouseenter(function(){
+            $('.stylesDek').css('opacity: 1')
+            $('.stylesDek').removeClass('fadeOutDown')
+            $('.stylesDek').addClass('animated fadeInUp');
+        })
+        .mouseleave(function(){
+            $('.stylesDek').css('opacity: 0')
+            $('.stylesDek').removeClass('fadeInUp')
+            $('.stylesDek').addClass('fadeOutDown');
+        })
+
 
 // --------------------- PAIRING TOUTS ---------------------- //
-
-// function chickenToutHover() {
-//     $('#chickenTout.img').addClass('hover')
-//     $('#chickenTout .pairingToutTitle').removeClass('animated fadeIn')
-//     $('#chickenTout .pairingToutTitle').addClass('animated fadeOut');
-// } 
-
-// function chickenToutLeave() {
-//     $('#chickenTout.img').removeClass('hover')
-//     $('#chickenTout .pairingToutTitle').removeClass('animated fadeOut')
-//     $('#chickenTout .pairingToutTitle').addClass('animated fadeIn');
-// } 
 
 
 if($(window).width() > 561 ){
     $('#vegTout.img')
         .mouseenter(function(){
             $(this).addClass('hover')
-            $('#vegTout .pairingToutTitle').removeClass('animated fadeIn')
+            $('#vegTout .pairingToutTitle').removeClass('fadeIn')
             $('#vegTout .pairingToutTitle').addClass('animated fadeOut');
         })
         .mouseleave(function(){
             $(this).removeClass('hover')
-            $('#vegTout .pairingToutTitle').removeClass('animated fadeOut')
-            $('#vegTout .pairingToutTitle').addClass('animated fadeIn');
+            $('#vegTout .pairingToutTitle').removeClass('fadeOut')
+            $('#vegTout .pairingToutTitle').addClass('fadeIn');
         })
      $('#chickenTout.img')
         .mouseenter(function(){
             $(this).addClass('hover')
-            $('#chickenTout .pairingToutTitle').removeClass('animated fadeIn')
+            $('#chickenTout .pairingToutTitle').removeClass('fadeIn')
             $('#chickenTout .pairingToutTitle').addClass('animated fadeOut');
         })
         .mouseleave(function(){
             $(this).removeClass('hover')
-            $('#chickenTout .pairingToutTitle').removeClass('animated fadeOut')
-            $('#chickenTout .pairingToutTitle').addClass('animated fadeIn');
+            $('#chickenTout .pairingToutTitle').removeClass('fadeOut')
+            $('#chickenTout .pairingToutTitle').addClass('fadeIn');
         })       
     $('#chocTout.img')
         .mouseenter(function(){
             $(this).addClass('hover')
-            $('#chocTout .pairingToutTitle').removeClass('animated fadeIn')
+            $('#chocTout .pairingToutTitle').removeClass('fadeIn')
             $('#chocTout .pairingToutTitle').addClass('animated fadeOut');
         })
         .mouseleave(function(){
             $(this).removeClass('hover')
-            $('#chocTout .pairingToutTitle').removeClass('animated fadeOut')
-            $('#chocTout .pairingToutTitle').addClass('animated fadeIn');
+            $('#chocTout .pairingToutTitle').removeClass('fadeOut')
+            $('#chocTout .pairingToutTitle').addClass('fadeIn');
         })
 }
 
@@ -199,6 +213,13 @@ $('#textButton').click(function(){
         // .html('Thank you. Check your phone for a download link.')
         .html('You did not enter a valid phone number.');
 })
+
+
+
+
+
+
+
 
 
 

@@ -408,24 +408,27 @@ header ul li a.standardNav:hover:before {
     color: white;
     letter-spacing: 2;
     line-height: 26px;
-    text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, .6);
     font-size: 5vw;
     text-align: center;
     padding: 1% 0 4% 0%;
 }
 
-.grapesDec, .stylesDec {
+.grapesDek, .stylesDek {
 	color: white;
-    font-size: 1vw;
+    font-size: 1.25vw;
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 300;
     letter-spacing: 1;
-    text-shadow: 1px 1px 7px rgba(0, 0, 0, .4);
+    line-height: 1.75;
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, .6);
     text-align: center;
-    padding: 4% 0 4% 0;
+    padding: 2% 8% 4% 8%;
 	background: linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
   	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
   	background: -moz-linear-gradient(bottom, rgba(0,0,0,.9), rgba(0,0,0,0));
+  	-webkit-animation-duration: 10s;
+  	-moz-animation-duration: 10s;
   	opacity: 0;
 }
 
@@ -566,7 +569,7 @@ a.expand {
 }
 
 .pairingTout .overlay p {
-	padding: 8% 8% 3% 8%;
+	padding: 8% 6% 3% 6%;
     font-family: 'Pridi', serif;
     font-weight: 200;
     letter-spacing: 1;
@@ -578,12 +581,11 @@ a.expand {
 }
 
 .overlayButton {
-	padding: 10px 6px;
+	padding: 12px 6px;
 }
 
 .overlayButton a {
 	font-size: 14px;
-	letter-spacing: 1px;
 	padding: 12px;
 }
 
@@ -699,6 +701,13 @@ footer p {
 		font-size: 34px;
 	}
 
+  /* hero touts */
+  	.grapesDek, .stylesDek {
+	    font-size: 1.5vw;
+	    padding: 1% 6% 4% 6%;
+	    line-height: 1.5;
+	}
+
   /* pairing touts */
 	.pairingTout .overlay p {
 		font-size: 16px;
@@ -709,7 +718,7 @@ footer p {
 
 /**** media query ****/
 @media (max-width: 900px) {
-/* header */
+  /* header */
 	.menuBtn-fixed {
 		display: block;
 	}
@@ -732,7 +741,13 @@ footer p {
 		margin: 0;
 	}
 
-/* pairing tout */
+  /* hero touts */
+  	.grapesDek, .stylesDek {
+	    font-size: 1.75vw;
+	    padding: 1% 4% 4% 4%;
+	}
+
+  /* pairing tout */
 	.pairingTout h2 {
 		font-size: 34px;
 		padding: 28% 0;
@@ -741,7 +756,7 @@ footer p {
 		font-size: 14px;
 	}
 
-/* app tout */
+  /* app tout */
 	#appCopy {
     	max-width: 60%;
 	}
@@ -791,9 +806,11 @@ footer p {
 	.grapesTitle, .stylesTitle {
 		font-size: 12vw;
 	}
-	.grapesDec, .stylesDec {
-		font-size: 3vw;
+  	.grapesDek, .stylesDek {
+	    font-size: 2.75vw;
+	    padding: 3% 4% 4% 4%;
 	}
+
 
 
   /* tasting wine touts */
