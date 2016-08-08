@@ -269,7 +269,7 @@ header ul li a.standardNav:hover:before {
 	background: none;
  	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	line-height: 45px;
 	padding: 7px 15px 0px 15px;
 	color: #fff;
@@ -290,12 +290,12 @@ header ul li a.standardNav:hover:before {
 
 .responsiveMenu ul, .responsiveMenu-fixed ul {
 	background-color: rgba(255, 255, 255, 0.95);
-	text-align: right;
+	text-align: left;
 	width: 200px;
 	box-shadow: 0px 1px 8px rgba(0, 0, 10, .3);
 	position: fixed;
 	z-index: 6;
-	right: 0;
+	left: 0;
 	padding: 13px 0px 0px 0px;
 }
 
@@ -314,6 +314,10 @@ header ul li a.standardNav:hover:before {
 	margin: 0px 15px 0px 15px;
 	padding-bottom: 2px;
 	position: relative;
+}
+
+.responsiveMenu a:hover, .responsiveMenu-fixed a:hover {
+	color: #B83A7F;
 }
 
 .responsiveMenu ul li.appButton, .responsiveMenu-fixed ul li.appButton {
@@ -408,9 +412,6 @@ header ul li a.standardNav:hover:before {
     font-size: 5vw;
     text-align: center;
     padding: 1% 0 4% 0%;
-	/*background: linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
-  	background: -webkit-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
-  	background: -moz-linear-gradient(bottom, rgba(0,0,0,.6), rgba(0,0,0,0));*/
 }
 
 .grapesDec, .stylesDec {
@@ -430,11 +431,11 @@ header ul li a.standardNav:hover:before {
 
 /* ----- TASTING ----- */
 
-#tastingWine, #pairingFood {
+#tastingWine {
 	background-color: #F5F5F5;
 	overflow: hidden;
 	width: 100%;
-	padding-bottom: 1%;
+	padding-bottom: 2%;
 }
 
 .toutContainer {
@@ -461,6 +462,7 @@ header ul li a.standardNav:hover:before {
 	font-family: 'Pridi', serif;
 	font-weight: 200;
 	font-size: 36px;
+	line-height: 1.15;
 	color: black;
 	padding: 0px 0px 10px 0px;
 }
@@ -473,51 +475,69 @@ header ul li a.standardNav:hover:before {
 
 /* ----- PAIRING ----- */
 
+#pairingFood {
+	background-color: #F5F5F5;
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 5%;
+}
+
 .pairingTout {
-	width: 32%;
-	/* padding: 0% 2%; */
 	margin: 0% 2% 4% 0%;
-	display: inline-block;
-	position: relative;
-	height: 270px;
+	/*display: inline-block;*/
 }
 
 .pairingTout:last-child {
 	margin-right: 0%;
 }
 
-.vegTout {
-	background: url("../images/veg_image.jpg") left center no-repeat;
-	background-size: 100%;
-/*	-webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;*/
+.effects .img {
+  position: relative;
+  float: left;
+  margin-bottom: 5px;
+  width: 32%;
+  overflow: hidden;
 }
 
-.vegToutAlt {
-	background: url("../images/veg_image_darker.jpg") left center no-repeat;
-	background-size: 100%;
-/*	-webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;*/
+.effects .img img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  overflow: hidden;
 }
 
-.chickenTout {
-	background: url("../images/chicken_image.jpg") center center no-repeat;
-	background-size: 100%;
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  -webkit-transition: all 0.65s;
+  -moz-transition: all 0.65s;
+  -o-transition: all 0.65s;
+  transition: all 0.65s;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
 }
 
-.chickenToutAlt {
-	background: url("../images/chicken_image_darker.jpg") center center no-repeat;
-	background-size: 100%;
+a.expand {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  margin: 0 auto -30px auto;
 }
 
-.chocolateTout {
-	background: url("../images/chocolate_image.jpg") right center no-repeat;
-	background-size: 100%;
-}
-
-.chocolateToutAlt {
-	background: url("../images/chocolate_image_darker.jpg") right center no-repeat;
-	background-size: 100%;
+.img.hover .overlay {
+  height: 100%;
 }
 
 .pairingTout h2 {
@@ -527,26 +547,69 @@ header ul li a.standardNav:hover:before {
 	font-size: 40px;
 	color: white;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
-	/*padding: 25% 0% 3% 0%;*/
 	position: relative;
-    top: 30%;
+	padding: 28% 0;
+	background-color: rgba(0, 0, 0, .3);
 }
 
-.pairingTout p {
-	padding: 0% 10% 5% 10%;
+.pairingTout .dek {
+	padding: 3% 10% 0% 10%;
     color: white;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .85);
     position: relative;
-    top: 25%;
-    /*opacity: 0;*/
+    display: none;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: 'Rubik', Arial, sans-serif;
+	font-weight: 300;
 }
 
+.pairingTout .overlay p {
+	padding: 8% 8% 3% 8%;
+    font-family: 'Pridi', serif;
+    font-weight: 200;
+    letter-spacing: 1;
+    color: white;
+    text-align: center;
+    display: block;
+    line-height: 1.35;
+    font-size: 18px;
+}
+
+.overlayButton {
+	padding: 10px 6px;
+}
+
+.overlayButton a {
+	font-size: 14px;
+	letter-spacing: 1px;
+	padding: 12px;
+}
 
 /* ----- APP TOUT ----- */
 
-#appTout #appCopy {
-	margin-left: 10%;
+
+#appTout .appSection {
+	max-width: 900px;
+    margin: 0px auto;
+    padding: 6%;
+}
+
+#appTout .device {
+	max-width: 280px;
+	width: 30%
+}
+
+#appTout .appImage {
+	margin: 5% 5% 6% 0%;
+	max-width: 280px;
+	width: 100%;
+}
+
+#appCopy {
+	max-width: 65%;
+    margin-left: 7%;
 }
 
 #appTout h2 {
@@ -556,8 +619,7 @@ header ul li a.standardNav:hover:before {
 	color: black;
 	letter-spacing: 1.5;
 	line-height: 45px;
-	padding: 5% 0% 1% 0%;
-	margin-top: 5%;
+	padding: 2% 0% 1% 0%;
 }
 
 #appTout p {
@@ -569,46 +631,37 @@ header ul li a.standardNav:hover:before {
 	line-height: 30px;
 }
 
-.appStoreBadge {
-	padding-top: 4%;
+#appTout .appStoreBadge {
+	padding: 4% 0;
 }
 
-#textLink {
+#appTout #textLink {
 	margin: 2% 0 0 0;
 }
 
-#textLink p {
+#appTout #textLink p {
 	font-weight: 500;
 	font-size: 14px;
 }
 
-#textLink input {
-	padding: 2%;
+#appTout #textLink input {
+	padding: 11px;
 	font-size: 14px;
 	margin-top: 2%
 }
 
-#textLink button {
-	margin: 0;
+#appTout #textLink button {
 	display: inline-block;
-	margin-left: 1%;
+	margin: 2% 1%;
 }
 
-#confirm {
-	font-size: 12px;
+#alertBox {
+	font-size: 13px;
+	font-weight: 500;
+	padding: 2% 0;
 	opacity: 0;
 }
 
-#alert {
-	font-size: 12px;
-	color: red;
-	opacity: 0;
-}
-
-.appImage {
-	margin: 4% 10% 0% 0%;
-	max-width: 100%;
-}
 
 
 /* ----- FOOTER ----- */
@@ -630,13 +683,6 @@ footer p {
 
 
 
-/**** media query ****/
-@media (max-width: 1190px) {
-	.appImage {
-		margin: 4% 5% 0% 0%;
-	}
-	/*how do i get the text to scale as well as the image*/
-}
 
 /**** media query ****/
 @media (max-width: 1024px) {
@@ -649,10 +695,21 @@ footer p {
 	.largeHeader button {
 		display: none;
 	}
+	#appTout h2 {
+		font-size: 34px;
+	}
+
+  /* pairing touts */
+	.pairingTout .overlay p {
+		font-size: 16px;
+		line-height: 1.25;
+		padding: 8% 8% 4% 8%;
+	}
 }
 
 /**** media query ****/
 @media (max-width: 900px) {
+/* header */
 	.menuBtn-fixed {
 		display: block;
 	}
@@ -673,6 +730,30 @@ footer p {
 	.fixedHeader ul li.appButton {
 		display: block;
 		margin: 0;
+	}
+
+/* pairing tout */
+	.pairingTout h2 {
+		font-size: 34px;
+		padding: 28% 0;
+	}
+	.pairingTout .overlay p {
+		font-size: 14px;
+	}
+
+/* app tout */
+	#appCopy {
+    	max-width: 60%;
+	}
+	#appTout h2 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+	#appTout p {
+    	font-size: 16px;
+	}
+	#appTout #textlink p {
+    	font-size: 13px;
 	}
 }
 
@@ -731,16 +812,25 @@ footer p {
 	}
 
 
-  /* pairing */
-	.pairingTout {
+  /* pairing touts */
+	.effects .img {
 		width: 85%;
     	border: none;
     	display: block;
     	margin: 0 auto 10px auto;
     	float: none;
 	}
+	.pairingTout h2 {
+		padding: 25% 0;
+		font-size: 44px;
+	}
 	.pairingTout:last-child {
 		margin: 0 auto 30px auto;
+	}
+	.pairingTout .overlay p {
+		font-size: 18px;
+		line-height: 1.5;
+		padding: 15% 8% 6% 8%;
 	}
 }
 
@@ -755,8 +845,8 @@ footer p {
 		box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
 	}
 	.largeHeader h1 {
-		font-size: 36px;
-		padding: 10px 0px 10px 20px;
+		font-size: 28px;
+		padding: 10px 0px;
 		text-align: center;
 	}
 	.fixedHeader {
@@ -772,6 +862,7 @@ footer p {
   /* large header responsive */
 	.menuBtn {
 		display: block;
+	    padding-top: 3px;
 	}
 	.largeHeader nav {
 		display: none;
@@ -779,11 +870,9 @@ footer p {
 
   /* fixed header responsive */
 	.fixedHeader h1 {
-		/*font-size: 36px;
-		text-align: center;
-		float: none;*/
 		display: none;
 	}
+
 	.fixedHeader nav {
 		display: none;
 	}
@@ -796,5 +885,29 @@ footer p {
 	#intro p {
 		font-size: 16px;
 		padding: 2% 0% 3% 0%;
+	}
+
+  /* pairing touts */
+	.pairingTout h2 {
+		font-size: 36px;
+		padding: 20% 0;
+		background-color: rgba(0, 0, 0, .5);
+	}
+	.pairingTout .dek {
+		display: block;
+	}
+	.pairingTout .overlay p {
+		display: none;
+	}
+	.overlay {
+  		display: none;
+  	}
+
+  /* app tout */
+	#appTout .device {
+		display: none;
+	}
+	#appCopy {
+    	max-width: 90%;
 	}
 }

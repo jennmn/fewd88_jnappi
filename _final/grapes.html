@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title>Vine Academy</title>
+	<title>VA: All About Grapes</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Pridi:200,300,400|Quicksand|Rubik:300,400,500" rel="stylesheet">
 
@@ -23,7 +23,7 @@
 						<h1><a href="index.html" class="pulseAnimation">Vine Academy</a></h1>
 						<nav>
 							<ul>
-								<li><a href="#" class="standardNav">Grapes</a></li>
+								<li><a href="#" class="grapesOn">Grapes</a></li>
 								<li><a href="#" class="standardNav">Styles</a></li>
 								<li><a href="#" class="standardNav">Tasting Notes</a></li>
 								<li><a href="#" class="standardNav">Food Pairings</a></li>
@@ -35,7 +35,7 @@
 							<div class="menuBtn-fixed" id="menuBtn-fixed">&#9776;</div>
 							<div class="responsiveMenu-fixed">
 								<ul>
-									<li><a href="#">Grapes</a></li>
+									<li><a href="#" class="mobileNavSelected">Grapes</a></li>
 									<li><a href="#">Styles</a></li>
 									<li><a href="#">Tasting Notes</a></li>
 									<li><a href="#">Food Pairings</a></li>
@@ -49,9 +49,10 @@
 
 			<section id="hero">
 				<div id="grapesHero" class="heroImage">
+					<!-- <img src="images/grapes_hero.jpg" alt="Grapes Hero Image"> -->
 					<div class="sectionTitleContainer">
 						<div class="sectionTitleBox">
-							<h5>Tasting Wine</h5>
+							<h5>Grapes</h5>
 						</div>
 					</div>
 				</div>
@@ -61,9 +62,9 @@
 				<div class="wrapper">
 					<div id="filterTypes">
 						<ul>
-							<li><a href="#">all</a></li>
-							<li><a href="#">white</a></li>
-							<li><a href="#">red</a></li>
+							<li id="allTypes" class="filter" data-filter="all">all</li>
+							<li id="whiteTypes" class="filter" data-filter="white">white</li>
+							<li id="redTypes" class="filter" data-filter="red">red</li>
 						</ul>
 					</div>
 				</div>
@@ -73,8 +74,7 @@
 				<section id="cards">
 					<div class="wrapper">
 						<!-- 1. barbera -->
-						<div class="cardContainer" id="barbera">
-							<div class="cardFrame">
+						<div class="cardContainer mix red" id="barbera">
 								<img class="grapeIcon" src="images/grapeimages/Barbera_grape.png">
 								<h2>Barbera</h2>
 								<h3>Versatile, Light and Tart</h3>
@@ -93,12 +93,10 @@
 									<img class="grapeIcon smallIcon" src="images/grapeimages/Mencia_grape.png">
 									<h5>Mencia</h5>		
 								</div>
-							</div>
 						</div><!-- 1. barbera -->
 
 						<!-- 2. cabfranc -->
-						<div class="cardContainer" id="cabfranc">
-							<div class="cardFrame">
+						<div class="cardContainer mix red" id="cabfranc">
 								<img class="grapeIcon" src="images/grapeimages/CabFranc_grape.png">
 								<h2>Cabernet Franc</h2>
 								<h3>The Mothership</h3>
@@ -113,12 +111,10 @@
 									<img class="grapeIcon smallIcon" src="images/grapeimages/PetitVerdot_grape.png">
 									<h5>Petit Verdot</h5>		
 								</div>
-							</div>
 						</div><!-- 2. cabfranc -->
 
 						<!-- 3. cabernet -->
-						<div class="cardContainer" id="cabernet">
-							<div class="cardFrame">
+						<div class="cardContainer mix red" id="cabernet">
 								<img class="grapeIcon" src="images/grapeimages/Cabernet_grape.png">
 								<h2>Cabernet Sauvignon</h2>
 								<h3>Feel the Force</h3>
@@ -133,8 +129,115 @@
 									<img class="grapeIcon smallIcon" src="images/grapeimages/PetitVerdot_grape.png">
 									<h5>Petit Verdot</h5>		
 								</div>
-							</div>
 						</div><!-- 3. cabernet -->
+
+						<!-- 4. chardonnay -->
+						<div class="cardContainer mix white" id="chardonnay">
+								<img class="grapeIcon" src="images/grapeimages/Chardonnay_grape.png">
+								<h2>Chardonnay</h2>
+								<h3>The Big Daddy</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a nisl est. Suspendisse rutrum efficitur velit et convallis. Donec vestibulum massa id purus cursus, eget faucibus quam aliquam. Nullam finibus leo sit amet volutpat faucibus. Integer consequat volutpat velit quis accumsan. Praesent mi justo, tristique sed mi sit amet, ultricies facilisis ante.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus finibus nibh eget sapien lacinia, at venenatis nisl gravida. Nullam nisl risus, egestas id condimentum eu, scelerisque a ligula. Proin ex eros, tincidunt non est ut, ornare euismod tellus.</p>
+								<hr>
+								<h3 class="similarGrapes"></h3>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/CheninBlanc_grape.png">
+									<h5>Chenin Blanc</h5>		
+								</div>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Semillon_grape.png">
+									<h5>Semillon</h5>		
+								</div>
+						</div><!-- 4. chardonnay -->
+
+						<!-- 5. chenin blanc -->
+						<div class="cardContainer mix white" id="cheninBlanc">
+								<img class="grapeIcon" src="images/grapeimages/CheninBlanc_grape.png">
+								<h2>Chenin Blanc</h2>
+								<h3>Summery Sweet</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a nisl est. Suspendisse rutrum efficitur velit et convallis. Donec vestibulum massa id purus cursus, eget faucibus quam aliquam. Nullam finibus leo sit amet volutpat faucibus. Integer consequat volutpat velit quis accumsan. Praesent mi justo, tristique sed mi sit amet, ultricies facilisis ante.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus finibus nibh eget sapien lacinia, at venenatis nisl gravida. Nullam nisl risus, egestas id condimentum eu, scelerisque a ligula. Proin ex eros, tincidunt non est ut, ornare euismod tellus.</p>
+								<hr>
+								<h3 class="similarGrapes"></h3>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/GrenacheBlanc_grape.png">
+									<h5>Grenache Blanc</h5>		
+								</div>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Vermentino_grape.png">
+									<h5>Vermentino</h5>		
+								</div>
+						</div><!-- 5. chenin blanc -->
+
+						<!-- 6. corvina -->
+						<div class="cardContainer mix red" id="corvina">
+								<img class="grapeIcon" src="images/grapeimages/Corvina_grape.png">
+								<h2>Corvina</h2>
+								<h3>Brings the Bite</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a nisl est. Suspendisse rutrum efficitur velit et convallis. Donec vestibulum massa id purus cursus, eget faucibus quam aliquam. Nullam finibus leo sit amet volutpat faucibus. Integer consequat volutpat velit quis accumsan. Praesent mi justo, tristique sed mi sit amet, ultricies facilisis ante.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus finibus nibh eget sapien lacinia, at venenatis nisl gravida. Nullam nisl risus, egestas id condimentum eu, scelerisque a ligula. Proin ex eros, tincidunt non est ut, ornare euismod tellus.</p>
+								<hr>
+								<h3 class="similarGrapes"></h3>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Cabernet_grape.png">
+									<h5>Cabernet Sauvignon</h5>		
+								</div>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Petitverdot_grape.png">
+									<h5>Petit Verdot</h5>		
+								</div>
+						</div><!-- 6. corvina -->
+
+						<!-- 7. dolcetto -->
+						<div class="cardContainer mix red" id="dolcetto">
+								<img class="grapeIcon" src="images/grapeimages/Dolcetto_grape.png">
+								<h2>Dolcetto</h2>
+								<h3>Little Sweet One</h3>
+								<p>Nullam finibus leo sit amet volutpat faucibus. Integer consequat volutpat velit quis accumsan. Praesent mi justo, tristique sed mi sit amet, ultricies facilisis ante.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus finibus nibh eget sapien lacinia, at venenatis nisl gravida. Nullam nisl risus, egestas id condimentum eu, scelerisque a ligula. Proin ex eros, tincidunt non est ut, ornare euismod tellus.</p>
+								<hr>
+								<h3 class="similarGrapes"></h3>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Barbera_grape.png">
+									<h5>Barbera</h5>		
+								</div>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Bonarda_grape.png">
+									<h5>Bonarda</h5>		
+								</div>
+						</div><!-- 7. dolcetto -->
+
+						<!-- 8. gewurtztraminer -->
+						<div class="cardContainer mix white" id="gewurtztraminer">
+								<img class="grapeIcon" src="images/grapeimages/Gewurtztraminer_grape.png">
+								<h2>Gewurtztraminer</h2>
+								<h3>You Can't Miss It</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a nisl est. Suspendisse rutrum efficitur velit et convallis. Donec vestibulum massa id purus cursus, eget faucibus quam aliquam. Nullam finibus leo sit amet volutpat faucibus. Integer consequat volutpat velit quis accumsan. Praesent mi justo, tristique sed mi sit amet, ultricies facilisis ante.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus finibus nibh eget sapien lacinia, at venenatis nisl gravida.</p>
+								<hr>
+								<h3 class="similarGrapes"></h3>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Riesling_grape.png">
+									<h5>Riesling</h5>		
+								</div>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Torrontes_grape.png">
+									<h5>Torrontes</h5>		
+								</div>
+						</div><!-- 8. gewurtztraminer -->
+
+						<!-- 9. Grenache Blanc -->
+						<div class="cardContainer mix red" id="grenacheBlanc">
+								<img class="grapeIcon" src="images/grapeimages/GrenacheBlanc_grape.png">
+								<h2>Grenache Blanc</h2>
+								<h3>A White Grape With Backbone</h3>
+								<p>Duis a nisl est. Suspendisse rutrum efficitur velit et convallis. Donec vestibulum massa id purus cursus, eget faucibus quam aliquam. Nullam finibus leo sit amet volutpat faucibus. Integer consequat volutpat velit quis accumsan. Praesent mi justo, tristique sed mi sit amet, ultricies facilisis ante.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus finibus nibh eget sapien lacinia, at venenatis nisl gravida. Nullam nisl risus, egestas id condimentum eu, scelerisque a ligula. Proin ex eros, tincidunt non est ut, ornare euismod tellus.</p>
+								<hr>
+								<h3 class="similarGrapes"></h3>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Chardonnay_grape.png">
+									<h5>Chardonnay</h5>		
+								</div>
+								<div class="simGrapeGroup">
+									<img class="grapeIcon smallIcon" src="images/grapeimages/Vermentino_grape.png">
+									<h5>Vermentino</h5>		
+								</div>
+						</div><!-- 9. Grenache Blanc -->
 
 					</div>
 				</section>
@@ -143,7 +246,7 @@
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		
+		<script src="js/jquery.mixitup.min.js"></script>
 		<script src="js/vineAcademy.js"></script>
 	</body>
 	</html>
