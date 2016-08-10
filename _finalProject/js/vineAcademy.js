@@ -153,43 +153,7 @@ if($(window).width() > 561 ){
         })
 }
 
-// $(window).resize(function () {
-//     if($(window).width() > 561 ){
-//         $('#vegTout.img')
-//             .mouseenter(function(){
-//                 $(this).addClass('hover')
-//                 $('#vegTout .pairingToutTitle').removeClass('animated fadeIn')
-//                 $('#vegTout .pairingToutTitle').addClass('animated fadeOut');
-//             })
-//             .mouseleave(function(){
-//                 $(this).removeClass('hover')
-//                 $('#vegTout .pairingToutTitle').removeClass('animated fadeOut')
-//                 $('#vegTout .pairingToutTitle').addClass('animated fadeIn');
-//             })
-//          $('#chickenTout.img')
-//             .mouseenter(function(){
-//                 $(this).addClass('hover')
-//                 $('#chickenTout .pairingToutTitle').removeClass('animated fadeIn')
-//                 $('#chickenTout .pairingToutTitle').addClass('animated fadeOut');
-//             })
-//             .mouseleave(function(){
-//                 $(this).removeClass('hover')
-//                 $('#chickenTout .pairingToutTitle').removeClass('animated fadeOut')
-//                 $('#chickenTout .pairingToutTitle').addClass('animated fadeIn');
-//             })       
-//         $('#chocTout.img')
-//             .mouseenter(function(){
-//                 $(this).addClass('hover')
-//                 $('#chocTout .pairingToutTitle').removeClass('animated fadeIn')
-//                 $('#chocTout .pairingToutTitle').addClass('animated fadeOut');
-//             })
-//             .mouseleave(function(){
-//                 $(this).removeClass('hover')
-//                 $('#chocTout .pairingToutTitle').removeClass('animated fadeOut')
-//                 $('#chocTout .pairingToutTitle').addClass('animated fadeIn');
-//             })
-//     }
-// });
+
 
 $(window).resize(function () {
     if($(window).width() <= 560 ){
@@ -205,15 +169,44 @@ $(window).resize(function () {
 
 // --------------------- TEXT APP LINK---------------------- //
 
-$('#textButton').click(function(){
-    // alert('A link is on its way!');
-    $('#alertBox')
-        .css('opacity', '1')
-        .css('color', 'red')
-        // .html('Thank you. Check your phone for a download link.')
-        .html('You did not enter a valid phone number.');
-})
+// $('#textButton').click(function(){
+//     // alert('A link is on its way!');
+//     $('#alertBox')
+//         .css('opacity', '1')
+//         .css('color', 'red')
+//         // .html('Thank you. Check your phone for a download link.')
+//         .html('You did not enter a valid phone number.');
+// })
 
+function validatePhone(phoneNumber) {
+    var a = document.getElementById(phoneNumber).value;
+    var filter = /^[0-9-+.]+$/;
+    if (filter.test(a)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+$('#textButton').click(function(e) {
+    if (validatePhone('phoneNumber')) {
+        $('#alertBox')
+            .css('opacity', '1')
+            .css('color', 'black')
+            .html('Thank you. Check your phone for a download link.');
+    } else {
+        $('#alertBox')
+            .css('opacity', '1')
+            .css('color', 'red')
+            $('#alertBox').html('You did not enter a valid phone number.');
+   }
+});
+
+$('input:text').focus(
+    function(){
+        $(this).val('');
+    });
 
 
 
@@ -226,48 +219,42 @@ $('#textButton').click(function(){
 
 // ---------------- GRAPE CARDS FILTERING------------------- //
 
+
 $('#allTypes').click(function(){
     $(this).addClass('filterSelected')
     $('#redTypes').removeClass('filterSelected')
     $('#whiteTypes').removeClass('filterSelected')
-    $('#barbera').show();
-    $('#cabfranc').show();
-    $('#cabernet').show();
-    $('#corvina').show();
-    $('#chardonnay').show();
-    $('#cheninBlanc').show();
-    $('#dolcetto').show();
-    $('#gewurtztraminer').show();
-    $('#grenacheBlanc').show();
+    $('.cardContainer.white').show();
+    $('.cardContainer.red').show();
 })
 
 $('#whiteTypes').click(function(){
     $(this).addClass('filterSelected')
     $('#redTypes').removeClass('filterSelected')
     $('#allTypes').removeClass('filterSelected')
-    $('#chardonnay').show();
-    $('#cheninBlanc').show();
-    $('#gewurtztraminer').show();
-    $('#grenacheBlanc').show();
-    $('#barbera').hide();
-    $('#cabfranc').hide();
-    $('#cabernet').hide();
-    $('#corvina').hide();
-    $('#dolcetto').hide();
+    $('.cardContainer.white').show();
+    $('.cardContainer.red').hide();
 })
 
 $('#redTypes').click(function(){
     $(this).addClass('filterSelected')
     $('#whiteTypes').removeClass('filterSelected')
     $('#allTypes').removeClass('filterSelected')
-    $('#barbera').show();
-    $('#cabfranc').show();
-    $('#cabernet').show();
-    $('#corvina').show();
-    $('#dolcetto').show();
-    $('#chardonnay').hide();
-    $('#cheninBlanc').hide();
-    $('#gewurtztraminer').hide();
-    $('#grenacheBlanc').hide();
+    $('.cardContainer.white').hide();
+    $('.cardContainer.red').show();
 })
 
+
+
+// $('.open-popup-link').magnificPopup({
+//   type:'inline',
+//   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+// });
+
+$('testbutton').magnificPopup({
+  items: {
+      src: '<div class="white-popup">Dynamically created popup</div>',
+      type: 'inline'
+  },
+  closeBtnInside: true
+});
