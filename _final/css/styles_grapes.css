@@ -406,9 +406,9 @@ hr {
 
 
 /* LIGHTBOX */
-/*#mylightbox {
-	display: none;
-}*/
+#mylightbox {
+	visibility: 0;
+}
 
 
 /**** media query ****/
